@@ -1,12 +1,13 @@
 Nathaniel Houk is an engineer at Flow Traders, where he works on devops for
 high frequency trading. He has professional experience developing in Python, 
 C#, and Java. He did his bachelors at the University of Southern California 
-where he graduated in 2008 summa cum laude with a 4.0 major GPA. He worked 
-as a teaching assisant for EE105 taught by Professor Mark Redekopp. In Fall 
-2005 he won the USC Programming Contest writing his solutions in C++. His EE459 
-senior design project involved writing embedded C and reverse engineering the 
-Apple 30-pin connector to build an alarm clock called iSnooze. In 2006 he founded 
-the USC Chapter of Engineers Without Borders and served as the President through 
-2008. The EWB-USC club is a 501(c)3 organization dedicated to improving lives 
-through sustainable water and related engineering projects. He grew up on 
-Bainbridge Island, WA and graduated from Bainbridge High School in 2004.
+where he graduated in 2008 summa cum laude with a 4.0 major GPA in Computer 
+Engineering and Computer Science. He worked as a teaching assisant for EE105 
+taught by Professor Mark Redekopp. In Fall 2005 he won the USC Programming 
+Contest writing his solutions in C++. His EE459 senior design project involved 
+writing embedded C and reverse engineering the Apple 30-pin connector to build 
+an alarm clock called iSnooze. In 2006 he founded the USC Chapter of Engineers 
+Without Borders and served as the President through 2008. The EWB-USC club is 
+a 501(c)3 organization dedicated to improving lives through sustainable water 
+and related engineering projects. He grew up on Bainbridge Island, WA and 
+graduated from Bainbridge High School in 2004.
