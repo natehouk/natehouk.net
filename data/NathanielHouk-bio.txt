@@ -2,7 +2,7 @@ Nathaniel Houk is an engineer at Flow Traders, where he works on devops for
 high frequency trading. He has professional experience developing in Python, 
 C#, and Java. He did his bachelors at the University of Southern California 
 where he graduated in 2008 summa cum laude with a 4.0 major GPA in Computer 
-Engineering and Computer Science. He worked as a teaching assisant for EE105 
+Engineering and Computer Science. He worked as a teaching assisant for EE106 
 taught by Professor Mark Redekopp. In Fall 2005 he won the USC Programming 
 Contest writing his solutions in C++. His EE459 senior design project involved 
 writing embedded C and reverse engineering the Apple 30-pin connector to build 
