@@ -143,6 +143,91 @@
           </tr> 
         </tbody></table>
 
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Code</heading>
+              <p>
+                Things I've programmed.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+          <tr onmouseout="porshadmanip_stop()" onmouseover="porshadmanip_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='snake_image'>
+                  <img src='images/snake-inverted.png' width="160"></div>
+                <img src='images/snake.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function porshadmanip_start() {
+                  document.getElementById('snake_image').style.opacity = "1";
+                }
+
+                function porshadmanip_stop() {
+                  document.getElementById('snake_image').style.opacity = "0";
+                }
+                porshadmanip_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://github.com/natehouk/snake">
+                <strong>Snake</strong>
+              </a>
+              <br>
+              <strong>Nathaniel J. Houk</strong>,
+              David Reeve
+              <br>
+              <em>CS101</em>, Spring 2001
+              <br>
+              <a href="https://www.bisd303.org/bhs">school page</a> /
+              <a href="https://www.allegro.cc/depot/Snake2/">project page</a> / 
+              <a href="https://github.com/natehouk/snake/blob/master/readme.txt">readme</a> /
+              <a href="https://github.com/natehouk/snake/archive/master.zip">download</a>
+              <p></p>
+              <p>Navigate the snake around the screen and try to eat the apples to gain points. Once you have eaten all of the apples on the level, you will advance to the next level. Try to get the highest points possible to make the scoreboard. You die by running into a wall, or running into yourself. <em>(Windows only)</em></p>
+            </td>
+          </tr>
+
+          <tr onmouseout="porshadmanip_stop()" onmouseover="porshadmanip_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='mastermind_image'>
+                  <img src='images/mastermind-neon.png' width="160"></div>
+                <img src='images/mastermind.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function porshadmanip_start() {
+                  document.getElementById('mastermind_image').style.opacity = "1";
+                }
+
+                function porshadmanip_stop() {
+                  document.getElementById('mastermind_image').style.opacity = "0";
+                }
+                porshadmanip_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://github.com/natehouk/mastermind">
+                <strong>Mastermind</strong>
+              </a>
+              <br>
+              <strong>Nathaniel J. Houk</strong>
+              <br>
+              <em>CS101</em>, Spring 2001
+              <br>
+              <a href="https://www.bisd303.org/bhs">school page</a> /
+              <a href="https://www.allegro.cc/depot/MasterMind">project page</a> / 
+              <a href="https://github.com/natehouk/mastermind/archive/master.zip">download</a>
+              <p></p>
+              <p>Mastermind challenges you by randomly picking four pegs, each with six different color possibilities. Your goal is to guess the order and color of those four pegs, in only ten tries, while receiving clues from the computer in the form of black and white pegs. Based off the original board game. <em>(Windows only)</em></p>
+            </td>
+          </tr>
+        </tbody></table>
+
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
