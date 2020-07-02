@@ -13,6 +13,12 @@
     gtag('config', 'UA-156008833-1');
   </script>
 
+  <!-- The stylesheet should go in the <head>, or be included in your CSS -->
+  <link rel="stylesheet" href="src/blockrain.css">
+
+  <!-- jQuery and Blockrain.js -->
+  <script src="assets/js/jquery-1.11.1.min.js"></script>
+
   <title>Nathaniel Houk</title>
   
   <meta name="author" content="Nathaniel Houk">
@@ -29,6 +35,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr style="padding:0px">
             <td style="padding:2.5%;width:63%;vertical-align:middle">
+              
               <p style="text-align:center">
                 <name>Nathaniel Houk</name>
               </p>
@@ -282,8 +289,26 @@
                 <script type="text/javascript" src="//counter.websiteout.net/js/2/10/0/0"></script>
               </p>
               <p style="text-align:center;font-size:small;">
+                Press T for Tetris
+              </p>
+              <p style="text-align:center;font-size:small;">
                 <a href='https://webring.xxiivv.com/#random' target='_blank'><img width="20" height="20" src='images/icon.black.svg'/></a>
               </p>
+              <div class="game" style="margin:0 auto;width:250px;height:500px;"></div>
+              <script src="src/blockrain.jquery.libs.js"></script>
+              <script src="src/blockrain.jquery.src.js"></script>
+              <script src="src/blockrain.jquery.themes.js"></script>
+              <script>
+                  $('.game').toggle();
+                  $('.game').blockrain();
+                  $(document).keypress(function(e){
+                      var key = e.which;
+                      if (key == 116) {
+                          // if the user pressed 't' (for 'tetris'):
+                          $('.game').toggle();
+                      }
+                  });
+              </script>
             </td>
           </tr>
         </tbody></table>
