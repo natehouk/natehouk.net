@@ -266,6 +266,21 @@
           <tr>
             <td style="padding:0px">
               <br>
+              <div class="game" style="margin:0 auto;width:250px;height:500px;"></div>
+              <script src="src/blockrain.jquery.libs.js"></script>
+              <script src="src/blockrain.jquery.src.js"></script>
+              <script src="src/blockrain.jquery.themes.js"></script>
+              <script>
+                  $('.game').toggle();
+                  $('.game').blockrain();
+                  $(document).keypress(function(e){
+                      var key = e.which;
+                      if (key == 116) {
+                          // if the user pressed 't' (for 'tetris'):
+                          $('.game').toggle();
+                      }
+                  });
+              </script>
               <p style="text-align:center;font-size:small;">
                 <a href="https://linuxdeveloper.123guestbook.com/">Sign the guestbook!</a>
               </p>
@@ -294,21 +309,6 @@
               <p style="text-align:center;font-size:small;">
                 <a href='https://webring.xxiivv.com/#random' target='_blank'><img width="20" height="20" src='images/icon.black.svg'/></a>
               </p>
-              <div class="game" style="margin:0 auto;width:250px;height:500px;"></div>
-              <script src="src/blockrain.jquery.libs.js"></script>
-              <script src="src/blockrain.jquery.src.js"></script>
-              <script src="src/blockrain.jquery.themes.js"></script>
-              <script>
-                  $('.game').toggle();
-                  $('.game').blockrain();
-                  $(document).keypress(function(e){
-                      var key = e.which;
-                      if (key == 116) {
-                          // if the user pressed 't' (for 'tetris'):
-                          $('.game').toggle();
-                      }
-                  });
-              </script>
             </td>
           </tr>
         </tbody></table>
