@@ -1,0 +1,4 @@
+[[plugins]]
+  package = "netlify-plugin-visual-diff"
+  [plugins.inputs]
+    failBuildOnDiff = false
