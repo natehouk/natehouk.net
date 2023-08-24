@@ -1,5 +1,5 @@
 [[plugins]]
   package = "netlify-plugin-visual-diff"
   [plugins.inputs]
-    ignoreSelector = "counter"
+    ignoreSelector = ".counter"
     failBuildOnDiff = false
