@@ -5,21 +5,21 @@
     var _paq = window._paq = window._paq || [];
     /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
     _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-    _paq.push(["setCookieDomain", "*.linuxdeveloper.io"]);
-    _paq.push(["setDomains", ["*.linuxdeveloper.io","*.blog.linuxdeveloper.io","*.wiki.linuxdeveloper.io"]]);
-    _paq.push(["enableCrossDomainLinking"]);
+    _paq.push(["setCookieDomain", "*.natehouk.com"]);
+    _paq.push(["setDomains", ["*.natehouk.com"]]);
     _paq.push(["setDoNotTrack", true]);
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
+    _paq.push(['enableHeartBeatTimer']);
     (function() {
-      var u="//analytics.linuxdeveloper.io/";
+      var u="https://mana.matomo.cloud/";
       _paq.push(['setTrackerUrl', u+'matomo.php']);
-      _paq.push(['setSiteId', '3']);
+      _paq.push(['setSiteId', '8']);
       var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      g.async=true; g.src='//cdn.matomo.cloud/mana.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
     })();
   </script>
-  <noscript><p><img src="//analytics.linuxdeveloper.io/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+  <noscript><p><img src="https://mana.matomo.cloud/matomo.php?idsite=8&amp;rec=1" style="border:0;" alt="" /></p></noscript>
   <!-- End Matomo Code -->
 
   <link rel="stylesheet" href="src/blocks.css" />
@@ -370,7 +370,7 @@
                 Press T for Tetris
               </p>
               <p style="text-align:center;font-size:small;">
-                <a href="https://analytics.linuxdeveloper.io">Stats</a> | <a href="https://status.epsilonrecords.nl">Status</a>
+                <a href="https://mana.matomo.cloud">Stats</a> | <a href="https://epsilon.fail">Status</a>
               </p>
             </td>
           </tr>
