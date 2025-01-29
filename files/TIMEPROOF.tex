@@ -74,7 +74,7 @@ Independent Researcher\\
 \maketitle
 
 \begin{abstract}
-This paper introduces Timeproof, a cryptographic protocol designed to establish probabilistic truth for mathematical assertions over time using blockchain-based timestamping and economic incentives. The protocol leverages cryptographic escrow mechanisms, secure commitments, and game-theoretic modeling to create a verifiable framework for truth verification. We provide a formal definition of the protocol, rigorous security proofs under standard cryptographic assumptions, and a detailed implementation using Bitcoin's blockchain. Additionally, we clarify its implications for computational complexity problems, such as P vs NP, while distinguishing it from existing timestamping and verifiable delay function (VDF) approaches. The protocol introduces a probabilistic verification model based on survival analysis and considers post-quantum security implications for future adaptations.
+This paper introduces Timeproof, a cryptographic protocol designed to establish probabilistic truth for mathematical assertions over time using blockchain-based timestamping and economic incentives. The protocol leverages cryptographic escrow mechanisms, secure commitments, and game-theoretic modeling to create a verifiable framework for truth verification. We provide a formal definition of the protocol, rigorous security proofs under standard cryptographic assumptions, and a detailed implementation using Bitcoin's blockchain. Additionally, we discuss its implications for computational complexity problems, such as P vs NP, while distinguishing it from existing timestamping and verifiable delay function (VDF) approaches. The protocol introduces a probabilistic verification model based on survival analysis and considers post-quantum security implications for future adaptations.
 \end{abstract}
 
 \chapter{Introduction}
@@ -87,7 +87,7 @@ Mathematical proofs traditionally require complete deductive arguments, which ca
     \item A probabilistic verification model based on a revised survival analysis framework.
     \item Implementation using Bitcoin blockchain with cryptographic escrow mechanisms.
     \item Analysis of security properties, including resistance to preimage and collusion attacks.
-    \item Discussion of P vs NP implications, clarifying its actual contribution to complexity theory.
+    \item Analysis of P vs NP implications within the Timeproof framework, including computational complexity and cryptographic security considerations
 \end{itemize}
 
 \chapter{Timeproof Protocol}
@@ -222,6 +222,8 @@ Where the algorithm makes use of:
     \item Security depends on the elliptic curve discrete logarithm problem (ECDLP) \cite{BlakeSeroussiSmart1999}
     \item Key derivation follows NIST SP 800-56A Rev. 3 key derivation guidelines
 \end{itemize}
+
+\clearpage  % Force a new page here
 
 \subsection{The Role of the Salt}
 
@@ -669,6 +671,8 @@ The Timeproof protocol offers several advantages over traditional proof systems:
 \end{itemize}
 However, Timeproof also has limitations, such as scalability challenges and reliance on the computational difficulty of cryptographic puzzles.
 
+\clearpage  % Force a new page here
+
 \section{Comparison with Prior Work}
 
 \begin{table}[h]
@@ -730,6 +734,27 @@ where $\mathcal{H}$ represents thermodynamic entropy and $V(\Delta t)$ the verif
         \item Margolus-Levitin theorem (10$^{51}$ ops/sec/kg)
         \item Planck-scale computation barriers
     \end{itemize}
+\end{itemize}
+
+
+
+\subsection{Post-Quantum Security}
+While currently secure against classical computers, future quantum computers could potentially break the cryptographic primitives used. We recommend the following quantum-resistant alternatives:
+
+\begin{itemize}
+    \item \textbf{Hash Function}: Replace SHA-256 with SHA-3 or a hash-based signature scheme like SPHINCS+
+    \item \textbf{Public Key Cryptography}: Replace ECDSA with a lattice-based scheme like CRYSTALS-Dilithium
+    \item \textbf{Verifiable Delay Functions}: Use quantum-resistant VDFs based on isogenies or class groups
+\end{itemize}
+
+The protocol can be adapted to these post-quantum primitives while maintaining its core functionality.
+
+\subsection{Attack Vectors and Mitigations}
+\begin{itemize}
+    \item \textbf{Miner Collusion}: Malicious miners could attempt to manipulate timestamps. Mitigation: Use multiple blockchain confirmations and consider cross-chain verification.
+    \item \textbf{Front-Running}: An attacker could attempt to claim a bounty just before the legitimate solver. Mitigation: Introduce a commit-reveal scheme for bounty claims.
+    \item \textbf{Time-Reversal Mining}: Miners could attempt to reorganize the blockchain to alter timestamps. Mitigation: Require sufficient proof-of-work depth for timestamp finality.
+    \item \textbf{Precomputation Attacks}: While the salt prevents most precomputation, quantum computers could still pose a threat. Mitigation: Use post-quantum cryptographic primitives as described above.
 \end{itemize}
 
 \section{Conclusion}
@@ -851,42 +876,5 @@ Goldreich, O. (2001). \textit{Foundations of Cryptography: Basic Tools}. Cambrid
 Myerson, R. B. (1991). \textit{Game Theory: Analysis of Conflict}. Harvard University Press.
 
 \end{thebibliography}
-
-\section{Comparison with Prior Work}
-
-\begin{table}[h]
-\centering
-\caption{Comparison with Related Protocols}
-\begin{tabular}{|l|l|l|l|}
-\hline
-\textbf{Feature} & \textbf{Timeproof} & \textbf{Proof of Existence} & \textbf{VDFs} \\
-\hline
-Timestamping & Yes & Yes & No \\
-Mathematical Verification & Yes & No & Partial \\
-Economic Incentives & Yes & No & No \\
-Probabilistic Truth & Yes & No & No \\
-Quantum Resistance & Partial & Partial & Yes \\
-\hline
-\end{tabular}
-\end{table}
-
-\subsection{Post-Quantum Security}
-While currently secure against classical computers, future quantum computers could potentially break the cryptographic primitives used. We recommend the following quantum-resistant alternatives:
-
-\begin{itemize}
-    \item \textbf{Hash Function}: Replace SHA-256 with SHA-3 or a hash-based signature scheme like SPHINCS+
-    \item \textbf{Public Key Cryptography}: Replace ECDSA with a lattice-based scheme like CRYSTALS-Dilithium
-    \item \textbf{Verifiable Delay Functions}: Use quantum-resistant VDFs based on isogenies or class groups
-\end{itemize}
-
-The protocol can be adapted to these post-quantum primitives while maintaining its core functionality.
-
-\subsection{Attack Vectors and Mitigations}
-\begin{itemize}
-    \item \textbf{Miner Collusion}: Malicious miners could attempt to manipulate timestamps. Mitigation: Use multiple blockchain confirmations and consider cross-chain verification.
-    \item \textbf{Front-Running}: An attacker could attempt to claim a bounty just before the legitimate solver. Mitigation: Introduce a commit-reveal scheme for bounty claims.
-    \item \textbf{Time-Reversal Mining}: Miners could attempt to reorganize the blockchain to alter timestamps. Mitigation: Require sufficient proof-of-work depth for timestamp finality.
-    \item \textbf{Precomputation Attacks}: While the salt prevents most precomputation, quantum computers could still pose a threat. Mitigation: Use post-quantum cryptographic primitives as described above.
-\end{itemize}
 
 \end{document}
