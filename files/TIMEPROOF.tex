@@ -537,31 +537,31 @@ To apply the timeproof protocol to the ( P ) vs ( NP ) problem \cite{Cook1971,Ka
 \subsection{Non-Constructive Proof via MAD Paradox}
 The Timeproof protocol formally captures the MAD paradox through:
 
-\begin{theorem}[Houk's MAD Incompleteness]
-For any finite-dimensional universe $U_n$ with $n < \infty$:
+\begin{theorem}[Computational Incompleteness]
+In any computational system with finite resources:
 \begin{enumerate}
-    \item $\exists$ non-constructive proof that $P=NP$
-    \item $\nexists$ efficient algorithm for SAT $\in P$
-    \item $U_n \models \text{MAD} \rightarrow \bot$ (paradoxical explosion)
+    \item There exist mathematical statements whose truth cannot be determined within the system
+    \item The P vs NP problem remains undecidable under finite computational constraints
+    \item Any attempt to resolve these limitations within the system leads to inconsistency
 \end{enumerate}
-Thus $U_\infty$ required for consistency.
+Thus, infinite computational resources are required for complete consistency.
 \end{theorem}
 
 \begin{proof}
-Via protocol's temporal verification function:
+Using the protocol's temporal verification function:
 \begin{enumerate}
-    \item $V(\Delta t) \rightarrow 1$ demonstrates (1)
-    \item Unclaimed bounty proves (2) 
-    \item Blockchain persistence proves $U_\infty$ requirement
+    \item As $\Delta t \to \infty$, $V(\Delta t) \to 1$ demonstrates the existence of undecidable statements
+    \item The persistent unclaimed bounty shows that P vs NP remains unresolved under finite constraints
+    \item The blockchain's unbounded growth represents the need for infinite resources
 \end{enumerate}
 \end{proof}
 
-\subsubsection{Physical Manifestation}
-The protocol's blockchain persistence empirically demonstrates:
+\subsubsection{Physical Implications}
+The protocol's properties suggest:
 \begin{itemize}
-    \item Gödel-Hawking incompleteness: As formalized in \cite{Hawking2002}
-    \item M-theoretic requirements: $N=11$ dimensions insufficient, requiring $N\rightarrow\infty$
-    \item Quantum gravity interface: Blockchain entropy mirrors holographic principle
+    \item Computational limits analogous to Gödel's incompleteness theorems
+    \item Resource constraints similar to those in physical theories
+    \item Information-theoretic connections between computation and physics
 \end{itemize}
 
 \subsection{Oracle Verification Mechanism}
