@@ -535,6 +535,54 @@ To apply the timeproof protocol to the ( P ) vs ( NP ) problem \cite{Cook1971,Ka
     \end{itemize}
 \end{enumerate}
 
+\subsection{Oracle Verification Mechanism}
+An oracle $\mathcal{O}$ can perform zero-knowledge verification:
+\begin{enumerate}
+    \item Prover submits $c = \text{Commit}(X, \pi)$ where $\pi$ is P=NP proof
+    \item $\mathcal{O}$ runs:
+    \begin{algorithmic}[1]
+        \While{$\Delta t < T_{\text{max}}$}
+            \State Check $V(\Delta t) \geq 1-\epsilon$
+            \If{Solution found} 
+                \State \Return $\text{ZK-SNARK}(\pi)$
+            \EndIf
+        \EndWhile
+        \State \Return $P \neq NP$ with confidence $1-\exp(-\lambda T_{\text{max}})$
+    \end{algorithmic}
+    \item Verification uses:
+    \begin{equation}
+        \Psi(t) = \Theta\left(V(t) - \frac{1}{2}\right)\begin{cases}
+            1 & \text{if } \exists \pi \\
+            0 & \text{otherwise}
+        \end{cases}
+    \end{equation}
+    where $\Theta$ is the Heaviside step function
+\end{enumerate}
+
+\subsection{Phase Transition Risks}
+The protocol introduces abrupt phase changes in mathematical certainty:
+\begin{equation}
+    \frac{\partial V}{\partial t} = \delta(t-t_0)(1 - V(t_0^-))
+\end{equation}
+where $t_0$ is solution discovery time. Implications include:
+\begin{itemize}
+    \item Instantaneous collapse of cryptographic security
+    \item Economic shock from simultaneous bounty claims
+    \item Existential risk from NP-hard solution optimization
+\end{itemize}
+
+\begin{table}[h]
+\centering
+\caption{Phase Transition Triggers}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Trigger} & \textbf{Effect} & \textbf{Timescale} \\ \hline
+P=NP Proof & Cryptographic collapse & Minutes \\ 
+P$\neq$NP Proof & Research paradigm shift & Years \\
+Quantum Breakthrough & Protocol migration & Days \\ \hline
+\end{tabular}
+\end{table}
+
 \section{Protocol Analysis}
 \subsection{Significance}
 
@@ -664,6 +712,24 @@ The protocol can be adapted to these post-quantum primitives while maintaining i
     \item \textbf{Front-Running}: An attacker could attempt to claim a bounty just before the legitimate solver. Mitigation: Introduce a commit-reveal scheme for bounty claims.
     \item \textbf{Time-Reversal Mining}: Miners could attempt to reorganize the blockchain to alter timestamps. Mitigation: Require sufficient proof-of-work depth for timestamp finality.
     \item \textbf{Precomputation Attacks}: While the salt prevents most precomputation, quantum computers could still pose a threat. Mitigation: Use post-quantum cryptographic primitives as described above.
+\end{itemize}
+
+\section{Cosmological Implications}
+\subsection{Entropic Regulation Hypothesis}
+The protocol's million-year persistence suggests computational hardness acts as fundamental entropy regulator:
+\begin{equation}
+    \mathcal{H}_{\text{universe}} \leq k_B \ln\left(\frac{1}{1-V(\Delta t)}\right)
+\end{equation}
+where $\mathcal{H}$ represents thermodynamic entropy and $V(\Delta t)$ the verification confidence. This implies:
+\begin{itemize}
+    \item P vs NP separation maintains cosmic information equilibrium
+    \item Efficient NP solutions would violate Bekenstein bound
+    \item Nature enforces computational censorship through:
+    \begin{itemize}
+        \item Bremermann's limit (10$^{50}$ bits/sec/kg)
+        \item Margolus-Levitin theorem (10$^{51}$ ops/sec/kg)
+        \item Planck-scale computation barriers
+    \end{itemize}
 \end{itemize}
 
 \section{Conclusion}
