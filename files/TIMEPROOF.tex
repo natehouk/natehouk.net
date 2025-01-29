@@ -114,16 +114,25 @@ The implementation utilized a Bitcoin address\\
 
 The temporal persistence of this initial implementation provides an empirical foundation for the protocol's effectiveness. As of \today, the continued existence of the unclaimed bounty contributes to the accumulating probabilistic evidence regarding the original claim, demonstrating the practical application of the verification function \( V(\Delta t) \) described in this work.
 
-\subsubsection{MAD Paradox Integration}
-The original 2015 implementation contained an early formulation of the MAD (Mathematical Asymmetric Demonstration) paradox:
-\begin{equation*}
-\text{MAD} \coloneqq (P=NP) \land (P\neq NP) \land \neg(P=NP \land P\neq NP)
-\end{equation*}
-This paradox manifests in the protocol through:
+\subsubsection{Consistency Paradox in Mathematical Verification}
+The protocol reveals an inherent tension in mathematical verification through three key observations:
+
 \begin{itemize}
-    \item Non-constructive proof existence via blockchain persistence
-    \item Constructive proof impossibility under finite-dimensional constraints
-    \item Infinite-dimensional multiverse requirement for consistency
+    \item \textbf{Existence of Unverifiable Proofs}: The blockchain persistence demonstrates that proofs can exist without being constructively verifiable, as shown by the unclaimed bounty mechanism
+    \item \textbf{Computational Constraints}: Under finite computational resources, certain proofs remain practically unverifiable despite their theoretical existence
+    \item \textbf{Temporal Dependence}: The verification probability $V(\Delta t)$ shows that mathematical truth can be time-dependent, challenging traditional notions of mathematical certainty
+\end{itemize}
+
+This tension is formally captured by the verification function:
+\begin{equation*}
+    \lim_{\Delta t \to \infty} V(\Delta t) = 1 \quad \text{while} \quad \exists t_0 \text{ such that } V(t_0) = 0
+\end{equation*}
+
+The protocol thus provides a framework for understanding the boundary between:
+\begin{itemize}
+    \item Existence of mathematical proofs
+    \item Practical verifiability
+    \item Computational complexity constraints
 \end{itemize}
 
 \section{Core Protocol Components}
