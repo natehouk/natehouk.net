@@ -78,12 +78,12 @@ Independent Researcher\\
 \maketitle
 
 \begin{abstract}
-This paper introduces Timeproof, a cryptographic protocol designed to establish probabilistic truth for mathematical assertions over time using blockchain-based timestamping and economic incentives. The protocol leverages cryptographic escrow mechanisms, secure commitments, and game-theoretic modeling to create a verifiable framework for truth verification. We provide a formal definition of the protocol, rigorous security proofs under standard cryptographic assumptions, and a detailed implementation using Bitcoin's blockchain. Additionally, we discuss its implications for computational complexity problems, such as P vs NP, while distinguishing it from existing timestamping and verifiable delay function (VDF) approaches. The protocol introduces a probabilistic verification model based on survival analysis and considers post-quantum security implications for future adaptations.
+We introduce Timeproof, a novel cryptographic protocol that establishes probabilistic truth verification through blockchain-based temporal persistence. The protocol combines secure commitment schemes with economic incentives to create a verifiable framework for mathematical claims, introducing a temporal verification function that quantifies the probability of a claim's validity based on its duration of remaining uncontested. Our key contributions include a formal mathematical framework for probabilistic truth verification, a practical implementation using Bitcoin's blockchain with proved security properties, and a game-theoretic analysis of the protocol's incentive structure. We provide rigorous security proofs under standard cryptographic assumptions and demonstrate the protocol's applicability to significant mathematical problems such as P vs NP, while addressing post-quantum security considerations and potential attack vectors.
 \end{abstract}
 
 \chapter{Timeproof Protocol}
 
-A \textbf{timeproof} is a cryptographic protocol and mathematical framework designed to establish probabilistic truth and priority for mathematical assertions through temporal persistence on the Bitcoin blockchain. Introduced by Nathaniel Houk in 2015, it combines cryptographic escrow mechanisms with blockchain timestamping to create an incentive-driven system for mathematical discovery.
+A \textbf{timeproof} is a cryptographic protocol and mathematical framework designed to establish probabilistic truth and priority for mathematical assertions through temporal persistence on the Bitcoin blockchain. First implemented in 2015, it combines cryptographic escrow mechanisms with blockchain timestamping to create an incentive-driven system for mathematical discovery.
 
 \subsection{Motivation}
 Traditional mathematical proofs require complete deductive arguments, which can be challenging for complex problems like P vs NP. Timeproof offers an alternative approach using cryptographic commitments and temporal verification, addressing the challenge of establishing priority and probabilistic truth for mathematical claims in a verifiable, incentive-compatible manner.
@@ -100,7 +100,7 @@ The Timeproof protocol's key contributions include:
 
 \section{Historical Context}
 
-The timeproof protocol emerged from a specific application to the P versus NP problem. On May 30, 2015, at 11:43:39 UTC, Nathaniel Houk implemented what would become the first timeproof by committing a proposed proof of P = NP to the Bitcoin blockchain mainnet through the Proof of Existence service \cite{proofofexistence}.
+The timeproof protocol emerged from a specific application to the P versus NP problem. The first implementation occurred on May 30, 2015, at 11:43:39 UTC, when a proposed proof of P = NP was committed to the Bitcoin blockchain mainnet through the Proof of Existence service \cite{proofofexistence}.
 
 This timeproof was recorded in a Bitcoin transaction with the hash\\
 \texttt{378933871106d84dcac011be06770acfe0491f6f80fe0402f399e0f548ebb99f},\\
@@ -366,91 +366,48 @@ Assume \(\mathcal{A}\) can generate a valid address without the correct \(H\) an
 Since all three cases reduce to problems assumed to be hard, the protocol is secure.
 \end{proof}
 
+\clearpage  % Force a new page here
+
 \section{Protocol Implementation}
 \subsection{Algorithmic Details}
 
-The Timeproof protocol is implemented using Bitcoin-compatible cryptographic primitives, ensuring compatibility with the Bitcoin blockchain. The following code demonstrates the core functionality:
+The Timeproof protocol is implemented using Bitcoin-compatible cryptographic primitives. Below is the core algorithm in pseudocode:
 
-\begin{verbatim}
-# Timeproof Protocol Implementation in Bitcoin Script
+\begin{algorithm}
+\caption{Timeproof Protocol}
+\begin{algorithmic}[1]
+\Procedure{CreateProof}{$proof, pubkey, privkey, bounty$}
+    \State $proofHash \gets \text{SHA-256}(proof)$
+    \State $signature \gets \text{Sign}(privkey, proofHash)$
+    \State $escrowAddress \gets \text{DeriveAddress}(proofHash)$
+    \State $locktime \gets \text{CurrentTime} + 1,000,000\ \text{years}$
+    \State \textbf{Verify} $bounty \geq 1\ \text{BTC}$
+    \State \textbf{Return} $(proofHash, signature, escrowAddress, locktime)$
+\EndProcedure
 
-# Constants
-<locktime> OP_CHECKLOCKTIMEVERIFY OP_DROP  # Minimum verification time (1 year)
-<min_bounty> OP_8 OP_VERIFY                # Minimum bounty (1 BTC in satoshis)
+\Procedure{VerifyProof}{$proofHash, signature, pubkey, locktime$}
+    \State \textbf{Verify} $\text{VerifySig}(pubkey, signature, proofHash)$
+    \State \textbf{Verify} $\text{CurrentTime} \geq locktime$
+    \State \textbf{Return} $\text{True}$ if all verifications pass
+\EndProcedure
 
-# Proof Structure
-<proofHash> OP_HASH160                      # proofHash
-<escrow_address> OP_HASH160                 # escrow address
-OP_0                                        # verified flag
-<bitcoinTxHash> OP_SHA256                   # bitcoinTxHash
-
-# Create Proof
-OP_IF
-    # Verify proof hash matches
-    OP_DUP
-    <proofHash> OP_HASH160
-    OP_EQUALVERIFY
-
-    # Verify signature
-    <signature> <pubkey> OP_CHECKSIGVERIFY
-
-    # Ensure minimum bounty
-    <min_bounty> OP_LESSTHANOREQUAL OP_VERIFY
-OP_ELSE
-    OP_DROP
-OP_ENDIF
-
-# Verify Proof
-OP_IF
-    # Verify proof hash matches
-    OP_DUP
-    <proofHash> OP_HASH160
-    OP_EQUALVERIFY
-
-    # Verify signature
-    <signature> <pubkey> OP_CHECKSIGVERIFY
-
-    # Verify locktime
-    <locktime> OP_CHECKLOCKTIMEVERIFY OP_DROP
-
-    # Ensure minimum bounty
-    <min_bounty> OP_LESSTHANOREQUAL OP_VERIFY
-OP_ELSE
-    OP_DROP
-OP_ENDIF
-
-# Claim Bounty
-OP_IF
-    # Verify escrow address matches
-    OP_DUP
-    <escrow_address> OP_HASH160
-    OP_EQUALVERIFY
-
-    # Verify signature
-    <signature> <pubkey> OP_CHECKSIGVERIFY
-
-    # Verify transaction hash matches
-    OP_SWAP
-    <bitcoinTxHash> OP_SHA256
-    OP_EQUALVERIFY
-
-    # Mark as verified
-    OP_1
-OP_ELSE
-    OP_DROP
-OP_ENDIF
-\end{verbatim}
+\Procedure{ClaimBounty}{$solution, escrowAddress, proofHash$}
+    \State $derivedAddress \gets \text{DeriveAddress}(proofHash)$
+    \State \textbf{Verify} $escrowAddress = derivedAddress$
+    \State \textbf{Verify} $\text{ValidateSolution}(solution)$
+    \State \textbf{Transfer} funds from $escrowAddress$ to claimant
+    \State \textbf{Return} $\text{True}$ if claim successful
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
 
 The implementation includes the following key components:
 
 \begin{itemize}
-    \item \textbf{Proof Structure}: Uses OP\_HASH160 and OP\_SHA256 for storing proof details
-    \item \textbf{Create Proof}: Validates the proof creation with OP\_CHECKSIGVERIFY
-    \item \textbf{Verify Proof}: Checks the proof's validity and timestamp with OP\_CHECKLOCKTIMEVERIFY
-    \item \textbf{Claim Bounty}: Validates the solution and transfers funds
+    \item \textbf{Proof Creation}: Generates cryptographic commitments and signatures
+    \item \textbf{Proof Verification}: Validates proof integrity and temporal requirements
+    \item \textbf{Bounty Claim}: Processes solution verification and fund transfer
 \end{itemize}
-
-The script maintains compatibility with Bitcoin's blockchain through the use of standard Bitcoin Script opcodes. It ensures the integrity and temporal persistence of the proof while providing a verifiable link to the Bitcoin blockchain.
 
 \subsection{Workflow}
 
@@ -557,27 +514,28 @@ To apply the timeproof protocol to the ( P ) vs ( NP ) problem \cite{Cook1971,Ka
 \end{enumerate}
 
 \subsection{Oracle Verification Mechanism}
-An oracle $\mathcal{O}$ can perform zero-knowledge verification:
+An oracle $\mathcal{O}$ capable of solving NP problems in P time can use the Timeproof protocol to demonstrate this capability without revealing their method:
 \begin{enumerate}
-    \item Prover submits $c = \text{Commit}(X, \pi)$ where $\pi$ is P=NP proof
+    \item Prover submits $c = \text{Commit}(X, \pi)$ where $\pi$ represents their P=NP acceleration capability
     \item $\mathcal{O}$ runs:
     \begin{algorithmic}[1]
         \While{$\Delta t < T_{\text{max}}$}
-            \State Check $V(\Delta t) \geq 1-\epsilon$
-            \If{Solution found} 
-                \State \Return $\text{ZK-SNARK}(\pi)$
-            \EndIf
+            \State Select random NP-complete problem $P_i$
+            \State Solve $P_i$ using acceleration capability
+            \State Generate proof $\pi_i$ of solution
+            \State Commit $\pi_i$ to blockchain
+            \State \Return $\text{ZK-SNARK}(\pi_i)$ \Comment{Proves solution without revealing method}
         \EndWhile
-        \State \Return $P \neq NP$ with confidence $1-\exp(-\lambda T_{\text{max}})$
+        \State \Return $P = NP$ acceleration capability with confidence $1-\exp(-\lambda T_{\text{max}})$
     \end{algorithmic}
     \item Verification uses:
     \begin{equation}
-        \Psi(t) = \Theta\left(V(t) - \frac{1}{2}\right)\begin{cases}
-            1 & \text{if } \exists \pi \\
+        \Psi(t) = \Theta\left(\frac{1}{n}\sum_{i=1}^n V_i(t) - \frac{1}{2}\right)\begin{cases}
+            1 & \text{if } \exists \text{consistent acceleration} \\
             0 & \text{otherwise}
         \end{cases}
     \end{equation}
-    where $\Theta$ is the Heaviside step function
+    where $\Theta$ is the Heaviside step function and $V_i(t)$ verifies individual problem solutions
 \end{enumerate}
 
 \subsection{Phase Transition Risks}
@@ -689,8 +647,6 @@ The Timeproof protocol offers several advantages over traditional proof systems:
     \item \textbf{Blockchain Integration}: The use of the Bitcoin mainnet blockchain ensures immutability and verifiability, addressing the trust issues associated with traditional proof systems.
 \end{itemize}
 However, Timeproof also has limitations, such as scalability challenges and reliance on the computational difficulty of cryptographic puzzles.
-
-\clearpage  % Force a new page here
 
 \section{Comparison with Prior Work}
 
