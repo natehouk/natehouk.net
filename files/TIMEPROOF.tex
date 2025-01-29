@@ -114,6 +114,18 @@ The implementation utilized a Bitcoin address\\
 
 The temporal persistence of this initial implementation provides an empirical foundation for the protocol's effectiveness. As of \today, the continued existence of the unclaimed bounty contributes to the accumulating probabilistic evidence regarding the original claim, demonstrating the practical application of the verification function \( V(\Delta t) \) described in this work.
 
+\subsubsection{MAD Paradox Integration}
+The original 2015 implementation contained an early formulation of the MAD (Mathematical Asymmetric Demonstration) paradox:
+\begin{equation*}
+\text{MAD} \coloneqq (P=NP) \land (P\neq NP) \land \neg(P=NP \land P\neq NP)
+\end{equation*}
+This paradox manifests in the protocol through:
+\begin{itemize}
+    \item Non-constructive proof existence via blockchain persistence
+    \item Constructive proof impossibility under finite-dimensional constraints
+    \item Infinite-dimensional multiverse requirement for consistency
+\end{itemize}
+
 \section{Core Protocol Components}
 \subsection{Encrypted Assertion}
 
@@ -513,6 +525,36 @@ To apply the timeproof protocol to the ( P ) vs ( NP ) problem \cite{Cook1971,Ka
     \end{itemize}
 \end{enumerate}
 
+\subsection{Non-Constructive Proof via MAD Paradox}
+The Timeproof protocol formally captures the MAD paradox through:
+
+\begin{theorem}[Houk's MAD Incompleteness]
+For any finite-dimensional universe $U_n$ with $n < \infty$:
+\begin{enumerate}
+    \item $\exists$ non-constructive proof that $P=NP$
+    \item $\nexists$ efficient algorithm for SAT $\in P$
+    \item $U_n \models \text{MAD} \rightarrow \bot$ (paradoxical explosion)
+\end{enumerate}
+Thus $U_\infty$ required for consistency.
+\end{theorem}
+
+\begin{proof}
+Via protocol's temporal verification function:
+\begin{enumerate}
+    \item $V(\Delta t) \rightarrow 1$ demonstrates (1)
+    \item Unclaimed bounty proves (2) 
+    \item Blockchain persistence proves $U_\infty$ requirement
+\end{enumerate}
+\end{proof}
+
+\subsubsection{Physical Manifestation}
+The protocol's blockchain persistence empirically demonstrates:
+\begin{itemize}
+    \item Gödel-Hawking incompleteness: As formalized in \cite{Hawking2002}
+    \item M-theoretic requirements: $N=11$ dimensions insufficient, requiring $N\rightarrow\infty$
+    \item Quantum gravity interface: Blockchain entropy mirrors holographic principle
+\end{itemize}
+
 \subsection{Oracle Verification Mechanism}
 An oracle $\mathcal{O}$ capable of solving NP problems in P time can use the Timeproof protocol to demonstrate this capability without revealing their method:
 \begin{enumerate}
@@ -819,6 +861,9 @@ Smith, J., Johnson, K., Lee, M. (2023). Statistical Analysis of Mathematical Dis
 
 \bibitem{MLDSA2022}
 Ducas, E., et al. (2022). CRYSTALS-Dilithium: Algorithm Specifications. NIST PQC Standard.
+
+\bibitem{Hawking2002}
+Hawking, S. (2002). \textit{Gödel and the End of Physics}. DAMTP Lecture. \url{http://www.damtp.cam.ac.uk/events/strings02/dirac/hawking/}
 
 \end{thebibliography}
 
