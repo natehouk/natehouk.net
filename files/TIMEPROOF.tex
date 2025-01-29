@@ -287,7 +287,7 @@ The protocol's security relies on several key factors:
     \item \textbf{Key Management}: Proper key management practices are essential to prevent loss of funds or proof access
     \item \textbf{Computational Difficulty}: SHA-256 is designed to be computationally intensive to reverse, making brute force searches impractical without significant resources
     \item \textbf{Economic Incentives}: The bounty must be large enough to justify the computational cost of solving the puzzle
-    \item \textbf{Temporal Persistence}: The longer the puzzle remains unsolved, the stronger the probabilistic evidence that the claim is false
+    \item \textbf{Temporal Persistence}: The longer the puzzle remains unsolved, the stronger the probabilistic evidence that the claim is falsxe
     \item \textbf{Preventing Precomputation Attacks}: The salt ensures that the Bitcoin address is unique for each instance of the proof, making precomputation attacks infeasible
     \item \textbf{Rainbow Table Resistance}: The salt acts as a defense against rainbow table attacks, making brute force attacks significantly more difficult
 \end{itemize}
@@ -324,49 +324,48 @@ The Timeproof protocol is implemented using Bitcoin-compatible cryptographic pri
 # Timeproof Protocol Implementation in Bitcoin Script
 
 # Constants
-OP_1 # Minimum verification time (1 year)
-OP_8 # Minimum bounty (1 BTC in satoshis)
+<timestamp> OP_CHECKLOCKTIMEVERIFY # Minimum verification time (1 year)
+<min_bounty> OP_8 # Minimum bounty (1 BTC in satoshis)
 
 # Proof Structure
-OP_HASH160 # proofHash
-OP_CHECKLOCKTIMEVERIFY # timestamp
-OP_HASH160 # escrow address
+<proofHash> OP_HASH160 # proofHash
+<escrow_address> OP_HASH160 # escrow address
 OP_0 # verified flag
-OP_HASH256 # bitcoinTxHash
+<bitcoinTxHash> OP_HASH256 # bitcoinTxHash
 
 # Create Proof
 OP_IF
     OP_DUP
-    OP_HASH160
+    <proofHash> OP_HASH160
     OP_EQUALVERIFY
-    OP_CHECKSIG
+    <signature> <pubkey> OP_CHECKSIG
 OP_ELSE
-    OP_RETURN
+    OP_DROP
 OP_ENDIF
 
 # Verify Proof
 OP_IF
     OP_DUP
-    OP_HASH160
+    <proofHash> OP_HASH160
     OP_EQUALVERIFY
-    OP_CHECKSIGVERIFY
-    OP_CHECKLOCKTIMEVERIFY
+    <signature> <pubkey> OP_CHECKSIG OP_VERIFY
+    <timestamp> OP_CHECKLOCKTIMEVERIFY
 OP_ELSE
-    OP_RETURN
+    OP_DROP
 OP_ENDIF
 
 # Claim Bounty
 OP_IF
     OP_DUP
-    OP_HASH160
+    <escrow_address> OP_HASH160
     OP_EQUALVERIFY
-    OP_CHECKSIGVERIFY
+    <signature> <pubkey> OP_CHECKSIG OP_VERIFY
     OP_SWAP
-    OP_HASH256
+    <bitcoinTxHash> OP_HASH256
     OP_EQUALVERIFY
     OP_1
 OP_ELSE
-    OP_RETURN
+    OP_DROP
 OP_ENDIF
 \end{verbatim}
 
