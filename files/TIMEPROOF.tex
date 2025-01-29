@@ -74,8 +74,21 @@ Independent Researcher\\
 \maketitle
 
 \begin{abstract}
-This paper introduces timeproof, a cryptographic protocol that establishes probabilistic truth for mathematical assertions through temporal persistence. The protocol combines cryptographic mechanisms with mathematical verification, using Bitcoin's blockchain for immutable timestamping and economic incentives to validate complex mathematical claims. Timeproof enables both priority claims and truth verification in mathematical discovery through its integration of established cryptographic primitives.
+This paper introduces Timeproof, a cryptographic protocol designed to establish probabilistic truth for mathematical assertions over time using blockchain-based timestamping and economic incentives. The protocol leverages cryptographic escrow mechanisms, secure commitments, and game-theoretic modeling to create a verifiable framework for truth verification. We provide a formal definition of the protocol, rigorous security proofs under standard cryptographic assumptions, and a detailed implementation using Bitcoin's blockchain. Additionally, we clarify its implications for computational complexity problems, such as P vs NP, while distinguishing it from existing timestamping and verifiable delay function (VDF) approaches. The protocol introduces a probabilistic verification model based on survival analysis and considers post-quantum security implications for future adaptations.
 \end{abstract}
+
+\chapter{Introduction}
+
+Mathematical proofs traditionally require complete deductive arguments, which can be challenging for complex problems like P vs NP. Timeproof offers an alternative approach using cryptographic commitments and temporal verification. The protocol utilizes blockchain timestamping, economic incentives, and cryptographic techniques to assess the validity of claims in a decentralized and incentive-compatible manner.
+
+\subsection{Key Contributions}
+\begin{itemize}
+    \item Formalization of the Timeproof protocol with rigorous security proofs.
+    \item A probabilistic verification model based on a revised survival analysis framework.
+    \item Implementation using Bitcoin blockchain with cryptographic escrow mechanisms.
+    \item Analysis of security properties, including resistance to preimage and collusion attacks.
+    \item Discussion of P vs NP implications, clarifying its actual contribution to complexity theory.
+\end{itemize}
 
 \chapter{Timeproof Protocol}
 
@@ -453,23 +466,23 @@ A timeproof \( T \) for a statement \( S \) is defined as a tuple \( (E, V, t) \
     \begin{equation*}
         V(\Delta t) = 1 - \exp\left(-\int_0^{\Delta t} \lambda(t) dt\right)
     \end{equation*}
-    where $\lambda(t)$ follows a non-homogeneous Poisson process with:
+    where \(\lambda(t)\) follows a non-homogeneous Poisson process with:
     \begin{equation*}
         \lambda(t) = \frac{f_X(t)}{1 - F_X(t)}
     \end{equation*}
-    for probability density function $f_X$ and CDF $F_X$ of solution time distribution, following rigorous survival analysis \cite{AndersenBorgan1997}.
+    for probability density function \(f_X\) and CDF \(F_X\) of solution time distribution, following rigorous survival analysis \cite{AndersenBorgan1997}.
     \begin{enumerate}
         \item \textbf{Temporal Monotonicity}: Proven via survival analysis \cite{Kleinbaum2012}:
         \begin{equation*}
             S(t) = \exp\left(-\int_0^t h(u)du\right)
         \end{equation*}
-        where hazard function $h(u) \geq 0\ \forall u$, making $S(t)$ non-increasing
+        where hazard function \(h(u) \geq 0\ \forall u\), making \(S(t)\) non-increasing
         \item \textbf{Asymptotic Certainty}: \( \lim_{\Delta t \to \infty} V(\Delta t) = 1 \) if \( S \) is false.
         \item \textbf{Zero-Knowledge Priority}: Requires satisfying
         \begin{equation*}
             \text{VerifySig}_{pk}(\sigma, H \parallel S \parallel t) = 1
         \end{equation*}
-        without revealing $sk$ or proof contents
+        without revealing \(sk\) or proof contents
     \end{enumerate}
 \end{itemize}
 
