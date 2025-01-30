@@ -1,0 +1,4 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is '/opt/src/website/files/.texpadtmp/PEQUALSNP.blg'
+[31] biber-darwin:340> INFO - === Thu Jan 30, 2025, 02:18:32
+[39] Biber.pm:419> INFO - Reading '/opt/src/website/files/.texpadtmp/PEQUALSNP.bcf'
