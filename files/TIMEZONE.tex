@@ -79,6 +79,13 @@ For any two events \( A \) and \( B \) recorded in a blockchain:
 where \( T_A \) and \( T_B \) are the timestamps of events \( A \) and \( B \) respectively.
 \end{theorem}
 
+\section{Mathematical Assertion Delay (MAD) Paradox}
+The MAD Paradox \cite{Houk2024} introduces a probabilistic model of truth verification over time, which aligns with blockchain's temporal persistence. The verification function:
+\[
+V(\Delta t) = 1 - \exp\left(-\lambda \Delta t\right)
+\]
+where \( V(\Delta t) \) is the probability of truth after time \( \Delta t \), provides a framework for understanding how blockchain timestamps can establish global truth over time. This paradox reinforces the idea that timezones are obsolete, as blockchain's globally consistent time reference enables probabilistic verification of events.
+
 \section{Timezone Elimination}
 We present a mathematical model for the elimination of timezones using blockchain timestamps. The model shows how a single global time reference can replace the complex system of timezones.
 
@@ -90,7 +97,7 @@ where \( T_{\text{global}} \) is the global time reference, \( T_{\text{blockcha
 \chapter{Practical Implications}
 
 \section{Global Coordination}
-The adoption of blockchain-based timekeeping has significant implications for global coordination. We examine how various industries, including finance, transportation, and telecommunications, can benefit from a unified time reference.
+The adoption of blockchain-based timekeeping has significant implications for global coordination. We examine how various industries, including finance, transportation, and telecommunications, can benefit from a unified time reference. The MAD Paradox \cite{Houk2024} further supports this by showing how temporal persistence can establish probabilistic truth across global systems.
 
 \section{Software Systems}
 Modern software systems often struggle with timezone-related bugs and complexities. We analyze how blockchain timestamps can simplify software development and reduce errors in time-sensitive applications.
@@ -163,6 +170,9 @@ Bashir, I. (2018). \textit{Mastering Blockchain: Distributed ledger technology, 
 
 \bibitem{Antonopoulos2017}
 Antonopoulos, A. M., \& Wood, G. (2017). \textit{Mastering Ethereum: Building Smart Contracts and DApps}. O'Reilly Media.
+
+\bibitem{Houk2024} 
+Houk, N. J. (2024). \textit{P=NP is True: A Non-Constructive Proof}. Independent Research.
 
 \end{thebibliography}
 
