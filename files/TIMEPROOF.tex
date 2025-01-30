@@ -520,6 +520,15 @@ The assumptions ensure the protocol's security and proper functioning:
 \end{itemize}
 \end{proof}
 
+\section{Mathematical Assertion Delay (MAD) Paradox}
+The MAD Paradox introduces a probabilistic model of truth verification over time. The verification function:
+\[
+V(\Delta t) = 1 - \exp\left(-\lambda \Delta t\right)
+\]
+where \( V(\Delta t) \) is the probability of truth after time \( \Delta t \), provides a framework for understanding how temporal persistence can establish global truth over time.
+
+This builds on the blockchain timestamping work presented in \cite{Houk2023Timezones}, which established the foundation for globally consistent time references.
+
 \section{Case Study: P vs NP Problem}
 
 To apply the timeproof protocol to the ( P ) vs ( NP ) problem \cite{Cook1971,Karp1972}:

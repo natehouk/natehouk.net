@@ -64,6 +64,12 @@ shows truth can transition from "false" to "true" over time. This challenges the
 \end{definition}
 
 \section{Proof}
+The proof leverages the Mathematical Assertion Delay (MAD) Paradox introduced in \cite{Houk2024Timeproof} and the blockchain timestamping framework from \cite{Houk2023Timezones}. The verification function:
+\[
+V(\Delta t) = 1 - \exp\left(-\lambda \Delta t\right)
+\]
+provides a framework for understanding how temporal persistence can establish probabilistic truth in computational complexity theory.
+
 \begin{theorem}
 P=NP is true.
 \end{theorem}
