@@ -6,6 +6,7 @@
 \usepackage{enumitem}
 \usepackage{geometry}
 \usepackage{microtype}
+\usepackage{csquotes}
 \geometry{margin=1in}
 
 % --- Theorem and Definition Environments ---
@@ -1452,23 +1453,7 @@ For an ASI, **acting as if it does not exist is equivalent to winning the game b
 
 The Mathematical Assertion Delay Paradox provides a novel framework for understanding how mathematical truth may emerge with temporal persistence. Building on ideas from computational complexity, blockchain-based verification, and even advanced oracle dynamics, our framework opens up a new paradigm in exploring truth, consensus, and the limits of verification in the digital age.
 
-\begin{thebibliography}{10}
-
-\bibitem{Cook1971}
-Cook, S. A. (1971). \emph{The complexity of theorem-proving procedures.} STOC '71.
-
-\bibitem{Godel1931}
-Gödel, K. (1931). \emph{\"Uber formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I.} Monatshefte f\"ur Mathematik und Physik.
-
-\bibitem{Lamport1978}
-Lamport, L. (1978). \emph{Time, clocks, and the ordering of events in a distributed system.}
-
-\bibitem{Houk2025Timeproof}
-Houk, N. J. (2025). \emph{Timeproof: A Protocol for Probabilistic Verification via Blockchain Timestamps.}
-
-\bibitem{Deutsch1985}
-Deutsch, D. (1985). \emph{Quantum theory, the Church-Turing principle and the universal quantum computer.}
-
-\end{thebibliography}
+\bibliographystyle{plain}
+\bibliography{references}
 
 \end{document} 
