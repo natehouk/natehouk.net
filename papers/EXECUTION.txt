@@ -15,13 +15,13 @@
 \tableofcontents
 
 \begin{abstract}
-In contemporary AI systems, execution models rely heavily on absolute timestamps, leading to synchronization challenges across distributed architectures. This paper introduces a \textbf{time-independent AI execution framework}, replacing absolute time references with a \textbf{dependency-graph model} for event-driven AI workflow orchestration. By structuring computations based on causality rather than timestamps, we propose a more robust, latency-tolerant, and globally consistent approach to AI task execution. This model is particularly relevant in decentralized AI networks, edge computing, and post-blockchain architectures, where deterministic execution is required across asynchronous environments.
+In contemporary AI systems, execution models rely heavily on absolute timestamps, leading to synchronization challenges across distributed architectures. This paper introduces a \textbf{time-independent AI execution framework}, replacing absolute time references with a \textbf{dependency-graph model} for event-driven AI workflow orchestration. By structuring computations based on causality rather than timestamps, we propose a more robust, latency-tolerant, and globally consistent approach to AI task execution. This model is particularly relevant in decentralized AI networks, edge computing, and post-blockchain architectures, where deterministic execution is required across asynchronous environments\cite{houk2025time}.
 \end{abstract}
 
 \section{Introduction}
-Current AI execution frameworks predominantly rely on absolute timestamps, assuming synchronized global clocks. However, in decentralized AI workflows, network latency, hardware discrepancies, and environmental unpredictability introduce inconsistencies. Building on prior work (*The Irrelevance of Timezones: A Post-Blockchain Perspective*), we argue that \textbf{time is an unnecessary constraint} in AI workflow synchronization and that a \textbf{dependency-graph execution model} provides a superior alternative.
+Current AI execution frameworks predominantly rely on absolute timestamps, assuming synchronized global clocks. However, in decentralized AI workflows, network latency, hardware discrepancies, and environmental unpredictability introduce inconsistencies. Building on prior work\cite{houk2025time}, we argue that \textbf{time is an unnecessary constraint} in AI workflow synchronization and that a \textbf{dependency-graph execution model} provides a superior alternative.
 
-This paper introduces a \textbf{Time-Independent AI Execution Model} based on directed acyclic graphs (DAGs) that encode event dependencies instead of absolute timestamps. We formalize this approach mathematically, analyze its computational complexity, and explore its implementation in real-world AI orchestration systems.
+This paper introduces a \textbf{Time-Independent AI Execution Model} based on directed acyclic graphs (DAGs) that encode event dependencies instead of absolute timestamps. We formalize this approach mathematically, analyze its computational complexity, and explore its implementation in real-world AI orchestration systems\cite{Lamport1978}.
 
 \section{Motivation}
 The reliance on absolute time in AI workflows creates several challenges:
@@ -92,16 +92,12 @@ By eliminating absolute time references in AI workflows, our model provides \tex
 \begin{itemize}
     \item \textbf{Dynamic DAG Reconfiguration}: Adapting execution dependencies in real-time.
     \item \textbf{AI-Native Operating Systems}: Where AI workflows replace traditional process scheduling.
-    \item \textbf{Post-Timestamp Blockchain Verification}: Enforcing execution determinism without timestamps.
+    \item \textbf{Post-Timestamp Blockchain Verification}: Enforcing execution determinism without timestamps\cite{Harel1987}.
 \end{itemize}
 
 This work represents a fundamental shift in AI automation, paving the way for \textbf{time-independent, causality-driven AI execution models}.
 
-\section*{References}
-\begin{thebibliography}{9}
-\bibitem{houk2025time} Nathaniel J. Houk, \textit{The Irrelevance of Timezones: A Post-Blockchain Perspective}, 2025.
-\bibitem{lamport1978} Leslie Lamport, \textit{Time, Clocks, and the Ordering of Events in a Distributed System}, 1978.
-\bibitem{harel1987} David Harel, \textit{Statecharts: A Visual Formalism for Complex Systems}, 1987. 
-\end{thebibliography}
+\bibliographystyle{plain}
+\bibliography{references}
 
 \end{document}
