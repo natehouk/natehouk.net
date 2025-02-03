@@ -4,19 +4,19 @@
     @ai:setup
     {
       "version": "1.1",
-      "description": "MarkAI-enhanced landing page with retro cyberpunk theme",
-      "spec": "https://github.com/natehouk/markai/blob/main/SPEC_v1.1.md"
+      "runtime": "browser",
+      "agents": ["content", "style", "interaction"],
+      "halt_monitor": {
+          "enabled": true,
+          "pattern_matching": "advanced",
+          "max_recursion": 5
+      }
     }
     @ai:end
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MarkAI - The Future of AI-OS Automation</title>
-    
-    <!-- NES.css - Nintendo style CSS framework -->
-    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     
     <style>
         body {

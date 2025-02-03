@@ -5,18 +5,45 @@
     {
       "version": "1.1",
       "description": "MarkAI-enhanced landing page with retro cyberpunk theme",
-      "spec": "https://github.com/natehouk/markai/blob/main/SPEC_v1.1.md"
+      "spec": "https://github.com/natehouk/markai/blob/main/SPEC_v1.1.md",
+      "agents": {
+        "content_refresher": {
+          "type": "continuous",
+          "interval": "24h",
+          "webhook": "https://api.markai.dev/refresh"
+        },
+        "style_optimizer": {
+          "type": "on_demand",
+          "trigger": "performance_threshold"
+        },
+        "convergence_monitor": {
+          "type": "realtime",
+          "max_depth": 5,
+          "halt_check": true
+        }
+      }
+    }
+    @ai:end
+
+    @ai:def /configure_guestbook
+    {
+      "version": "1.1",
+      "webhook": "https://api.markai.dev/guestbook",
+      "options": {
+        "sentiment_analysis": true,
+        "spam_protection": true,
+        "convergence_limit": 3,
+        "storage": {
+          "type": "distributed",
+          "replication": 3
+        }
+      }
     }
     @ai:end
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MarkAI - The Future of AI-OS Automation</title>
-    
-    <!-- Removed NES.css for a minimal design approach -->
-    <!-- <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" /> -->
-    <!-- Google Fonts (removed custom playful font) -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> -->
     
     <style>
         /* Updated body styling for minimalism */
@@ -160,10 +187,54 @@
         .nes-btn.primary:hover {
             background: #0056b3;
         }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .metric-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+        }
+
+        .live-metric {
+            font-size: 2em;
+            font-weight: bold;
+            color: #007bff;
+            margin: 10px 0;
+        }
+
+        .metric-trend {
+            font-size: 0.9em;
+        }
+
+        .metric-trend.positive {
+            color: #28a745;
+        }
+
+        .metric-trend.negative {
+            color: #dc3545;
+        }
     </style>
 </head>
 <body>
-    @ai: /initialize
+    @ai:initialize
+    {
+      "version": "1.1",
+      "runtime": "browser",
+      "agents": ["content", "style", "interaction"],
+      "halt_monitor": {
+        "enabled": true,
+        "pattern_matching": "advanced",
+        "max_recursion": 5
+      }
+    }
 
     <a href="https://github.com/natehouk/markai/blob/main/MARKAI_V1.1.md" class="specs-link">MarkAI v1.1 Spec</a>
 
@@ -181,6 +252,28 @@
                 <p>AI Agents Active: 3</p>
                 <p>System Health: Optimal</p>
                 <p>Neural Processing Units: Active</p>
+            </div>
+
+            <div class="terminal">
+                <div class="ai-command">@ai: /demonstrate_halt_solution</div>
+                @ai:def /halt_demonstration
+                {
+                    "version": "1.1",
+                    "recursion_depth": 0,
+                    "max_depth": 5,
+                    "pattern_recognition": {
+                        "type": "neural",
+                        "confidence_threshold": 0.95
+                    },
+                    "demonstration": {
+                        "step1": "Initialize pattern recognition",
+                        "step2": "Monitor call stack patterns",
+                        "step3": "Apply bounded recursion",
+                        "step4": "Detect convergence",
+                        "step5": "Graceful termination"
+                    }
+                }
+                @ai:end
             </div>
 
             <article class="content-article">
@@ -353,6 +446,145 @@
                         <li>🤖 Agent cooperation efficiency: 91.7%</li>
                         <li>🧠 Learning rate: 0.03 per interaction</li>
                     </ul>
+                </div>
+
+                <h3>🔬 Advanced MarkAI Examples</h3>
+                
+                <div class="highlight-box">
+                    <h4>📚 Interactive Guestbook with Multi-Agent Processing</h4>
+                    
+                    <div class="terminal">
+                        <div class="ai-command">@ai: /initialize_guestbook</div>
+                        @ai:def /advanced_guestbook
+                        {
+                            "version": "1.1",
+                            "webhook": "https://api.markai.dev/guestbook/v2",
+                            "agents": {
+                                "sentiment": {
+                                    "model": "emotion-bert-v3",
+                                    "threshold": 0.85
+                                },
+                                "moderator": {
+                                    "rules": ["toxicity", "spam", "relevance"],
+                                    "action": "autonomous"
+                                },
+                                "synthesizer": {
+                                    "mode": "collaborative",
+                                    "input_sources": ["user", "context", "history"]
+                                }
+                            },
+                            "storage": {
+                                "type": "distributed_blockchain",
+                                "consensus": "proof_of_intelligence"
+                            }
+                        }
+                        @ai:end
+                    </div>
+
+                    <div class="terminal">
+                        <div class="ai-command">@ai: /show_continuous_refactor</div>
+                        @ai:def /refactor_example
+                        {
+                            "version": "1.1",
+                            "target": "codebase",
+                            "strategies": {
+                                "pattern_detection": {
+                                    "scope": ["architecture", "style", "performance"],
+                                    "learning_rate": 0.01
+                                },
+                                "improvement_pipeline": {
+                                    "stages": [
+                                        "analyze",
+                                        "propose",
+                                        "validate",
+                                        "implement"
+                                    ],
+                                    "approval": "autonomous"
+                                }
+                            },
+                            "metrics": {
+                                "code_quality_delta": "+28%",
+                                "performance_gain": "+45%",
+                                "maintenance_reduction": "65%"
+                            }
+                        }
+                        @ai:end
+                    </div>
+
+                    <div class="terminal">
+                        <div class="ai-command">@ai: /demonstrate_agent_communication</div>
+                        @ai:def /agent_mesh
+                        {
+                            "version": "1.1",
+                            "protocol": "neural_mesh",
+                            "agents": {
+                                "content_optimizer": {
+                                    "role": "writer",
+                                    "objective": "engagement"
+                                },
+                                "security_monitor": {
+                                    "role": "validator",
+                                    "objective": "safety"
+                                },
+                                "performance_tuner": {
+                                    "role": "optimizer",
+                                    "objective": "speed"
+                                }
+                            },
+                            "convergence": {
+                                "method": "weighted_consensus",
+                                "resolution_strategy": "multi_objective_optimization",
+                                "fallback": "safe_state"
+                            }
+                        }
+                        @ai:end
+                    </div>
+
+                    <div class="terminal">
+                        <div class="ai-command">@ai: /content_refresh_demo</div>
+                        @ai:def /content_lifecycle
+                        {
+                            "version": "1.1",
+                            "refresh_triggers": {
+                                "time_based": "24h",
+                                "event_based": ["user_feedback", "new_data", "performance_drop"],
+                                "intelligence_based": {
+                                    "relevance_threshold": 0.85,
+                                    "freshness_score": 0.9
+                                }
+                            },
+                            "content_sources": {
+                                "primary": "markai_knowledge_base",
+                                "secondary": ["user_interactions", "global_trends", "performance_metrics"],
+                                "validation": "multi_agent_consensus"
+                            },
+                            "update_strategy": {
+                                "method": "incremental",
+                                "validation": "a/b_testing",
+                                "rollback": "automatic"
+                            }
+                        }
+                        @ai:end
+                    </div>
+
+                    <h4>🔄 Live Metrics</h4>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <h5>Agent Convergence</h5>
+                            <div class="live-metric">99.99%</div>
+                            <div class="metric-trend positive">↑ 0.01%</div>
+                        </div>
+                        <div class="metric-card">
+                            <h5>Content Freshness</h5>
+                            <div class="live-metric">98.5%</div>
+                            <div class="metric-trend positive">↑ 1.2%</div>
+                        </div>
+                        <div class="metric-card">
+                            <h5>Refactor Success</h5>
+                            <div class="live-metric">99.95%</div>
+                            <div class="metric-trend positive">↑ 0.15%</div>
+                        </div>
+                    </div>
                 </div>
             </article>
 
