@@ -24,27 +24,3 @@ clean-all:
 # Remove only LaTeX temporary files
 clean-temp:
     rm -f *.aux *.log *.synctex.gz *.out *.toc *.fls *.fdb_latexmk
-
-# Verify bibliography consistency
-check-bibs:
-    # Clean temporary files first
-    just clean-temp
-    # Check for unused bibliography entries
-    @for f in *.tex; do \
-        echo "=== Checking $f ==="; \
-        cited=$$(grep -ho '\\cite{[^}]*}' "$$f" | sed 's/\\cite{//g; s/}//g; s/,/ /g' | tr ' ' '\n' | sort -u); \
-        entries=$$(awk '/\\bibitem/{print $$2}' "$$f" | tr -d '[]' | sort -u); \
-        echo "Unused entries:"; \
-        comm -23 <(echo "$$entries") <(echo "$$cited"); \
-        echo "Uncited references:"; \
-        comm -13 <(echo "$$entries") <(echo "$$cited"); \
-        echo "-------------------"; \
-    done
-    # Check bibliography formatting
-    @for f in *.tex; do \
-        echo "Checking $f formatting:"; \
-        ! grep -q '\\bibliography{' "$$f" && \
-        ! grep -q '\\bibliographystyle{' "$$f" || \
-        (echo "ERROR: $f contains external bibliography commands" && exit 1); \
-        awk '/\\begin{thebibliography}/ {bib=1} bib && /\\bibitem/ {if ($$0 !~ /\\bibitem{/) {print "ERROR: Malformed bibitem in " FILENAME " line " NR; exit 1}} END {exit 0}' "$$f"; \
-    done
