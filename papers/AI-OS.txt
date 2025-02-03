@@ -102,5 +102,8 @@ AI-Native Operating Systems redefine how computation is structured in an AI-firs
 \end{itemize}
 Future research will explore hyperdimensional kernel architectures and quantum-AI integration.
 
+\bibliographystyle{plain}
+\bibliography{references}
+
 \end{document}
 

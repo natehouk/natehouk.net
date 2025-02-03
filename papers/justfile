@@ -11,10 +11,10 @@ copy:
 # Compile PDFs from .tex files with error detection and verbose output
 compile:
     for f in *.tex; do \
-        pdflatex -halt-on-error "$f"; \
-        bibtex "${f%.tex}"; \
-        pdflatex -halt-on-error "$f"; \
-        pdflatex -halt-on-error "$f"; \
+        pdflatex -halt-on-error "$f" && \
+        if [ -f "references.bib" ]; then bibtex "${f%.tex}"; fi && \
+        pdflatex -halt-on-error "$f" && \
+        pdflatex -halt-on-error "$f" || exit 1; \
     done
 
 # Remove all generated files including outputs

@@ -105,4 +105,7 @@ This work represents a fundamental shift in AI automation, paving the way for \t
     \item Daniel J. Abadi, \textit{The Design of Workflow Engines for Big Data Processing}, 2020.
 \end{enumerate}
 
+\bibliographystyle{plain}
+\bibliography{references}
+
 \end{document}
