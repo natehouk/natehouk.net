@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarkAI Documentation</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">MarkAI</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="docs.html" class="active">Docs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="documentation">
+      <h1>Documentation</h1>
+      <p>Welcome to the MarkAI documentation. Here you'll find detailed guides and instructions on harnessing the full potential of our AI-driven platform.</p>
+      
+      <div class="doc-section">
+        <h2>Getting Started</h2>
+        <p>Follow these steps to integrate MarkAI into your project:</p>
+        <pre><code>
+@ai:setup
+{
+  "version": "1.1",
+  "description": "MarkAI integration",
+  "agents": {
+    "content_refresher": {
+      "type": "continuous",
+      "interval": "24h"
+    }
+  }
+}
+@ai:end
+        </code></pre>
+      </div>
+      
+      <div class="doc-section">
+        <h2>Advanced Commands</h2>
+        <p>Extend your codebase functionality with advanced MarkAI commands:</p>
+        <pre><code>
+@ai:def /advanced_guestbook
+{
+  "version": "1.1",
+  "webhook": "https://api.markai.dev/guestbook/v2",
+  "agents": {
+    "sentiment": {
+      "threshold": 0.85
+    }
+  }
+}
+@ai:end
+        </code></pre>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 MarkAI. All rights reserved.</p>
+  </footer>
+</body>
+</html> 
