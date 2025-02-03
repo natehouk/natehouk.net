@@ -27,7 +27,9 @@
     a:hover {
       color: #f09228;
     }
-    pre.header, pre.footer {
+    pre.academic-header,
+    pre.header,
+    pre.footer {
       text-align: center;
       font-size: 14px;
       line-height: 1.2;
@@ -36,16 +38,55 @@
       text-align: center;
       font-size: 18px;
     }
+    
+    /* Prevent the leftmost table column from stretching on wide screens */
+    table th:first-child, table td:first-child {
+      white-space: nowrap;
+      width: 1%;
+    }
+    
+    .contact-info {
+      text-align: center;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .contact-info a {
+      color: #1772d0;
+    }
   </style>
 </head>
 <body>
-  <pre class="header">
-+-------------------------------------------------+
-|             ACADEMIC PAPERS INDEX               |
-+-------------------------------------------------+
+  <pre class="academic-header">
+    ___      _       _     _             
+   / _ \___ | |__   (_)___| |__   ___     
+  / /_)/ _ \| '_ \  | / __| '_ \ / _ \    
+ / ___/ (_) | |_) | | \__ \ | | |  __/    
+\/    \___/|_.__/  |_|___/_| |_|\___|    
+                                        
+         ACADEMIC PAPERS INDEX       
   </pre>
+  
+  <div class="contact-info">
+    <p><strong>Nathaniel J. Houk</strong></p>
+    <p>Work: <a href="mailto:nate@audiokit.ai">nate@audiokit.ai</a></p>
+    <p>Personal: <a href="mailto:njhouk@gmail.com">njhouk@gmail.com</a></p>
+    <p><a href="https://linkedin.com/in/natehouk" target="_blank">LinkedIn Profile</a></p>
+    <p><a href="https://contest.usc.edu/pmwiki.php/Fall05/Home" target="_blank">1st Place – USC Programming Contest (Fall 2005)</a></p>
+  </div>
+
+  <pre class="header">
+     .--------.
+    / .------. \
+   / /  CRYPTO  \ \
+  | |  PAPERS  | |
+   \ \        / /
+    \ '------' /
+     '--------'
+  </pre>
+  
   <h1>List of Papers</h1>
   <p>This index contains links to each paper in all available formats.</p>
+  
   <table>
     <thead>
       <tr>
@@ -78,15 +119,14 @@
   </table>
   
   <pre class="footer">
-    .--.      .--.
-   : (\ ". _.' ) ;
-    '.    `--'   '
-      )          (
-     (            )
-      \          /
-       \        /
-        '.___.'
-  
+     .--------.
+    / .------. \
+   / /  LOCK  \ \
+  | |  P=NP?  | |
+   \ \        / /
+    \ '------' /
+     '--------'
+
           © 2025 Academic Archive
   </pre>
 </body>

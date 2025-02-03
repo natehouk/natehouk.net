@@ -1,5 +1,13 @@
 # justfile
 
+# Default build target:
+# 1. Cleans any pre-existing intermediate files.
+# 2. Deletes existing .txt and .pdf files.
+# 3. Copies .tex files to .txt files for reference.
+# 4. Compiles each .tex file into a PDF using pdflatex.
+# 5. Cleans up any intermediate files generated during compilation.
+build: clean delete copy compile clean
+
 # Recipe to delete all .txt and .pdf files in the current directory
 delete:
     rm -f *.txt *.pdf
@@ -12,5 +20,16 @@ copy:
 compile:
     for file in *.tex; do pdflatex "$$file"; done
 
-# The default recipe: deletes old files, makes the text copies, then compiles the PDFs
-all: delete copy compile
+# Clean up intermediate files generated during LaTeX compilation.
+# This command only deletes files with the following extensions:
+# .aux, .log, .synctex.gz, .out, .toc, .fls, .fdb_latexmk
+clean:
+    find . -maxdepth 1 -type f \( \
+        -name "*.aux" -o \
+        -name "*.log" -o \
+        -name "*.synctex.gz" -o \
+        -name "*.out" -o \
+        -name "*.toc" -o \
+        -name "*.fls" -o \
+        -name "*.fdb_latexmk" \
+    \) -exec rm {} +
