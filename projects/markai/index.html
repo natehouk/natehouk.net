@@ -1,130 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    @ai:setup
+    {
+      "version": "1.0",
+      "description": "MarkAI-enhanced landing page with AI-driven automation and futuristic integrations."
+    }
+    @ai:end
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MarkAI - AI Instruction Markup</title>
+    <title>MarkAI - The Future of AI-OS Automation</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;700&display=swap');
+        
         body {
-            font-family: "Arial", sans-serif;
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
-            background: #fafafa;
+            color: #ffffff;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            overflow-x: hidden;
+            text-align: center;
         }
         header {
-            text-align: center;
-            padding: 60px 20px;
-            background: #111;
-            color: #fff;
+            padding: 80px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
         }
         header h1 {
-            font-size: 42px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 50px;
+            text-transform: uppercase;
             margin: 0;
+            animation: glow 1.5s infinite alternate;
         }
-        header p {
-            font-size: 18px;
+        @keyframes glow {
+            from { text-shadow: 0 0 10px cyan, 0 0 20px cyan; }
+            to { text-shadow: 0 0 20px cyan, 0 0 40px cyan; }
+        }
+        .hero p {
+            font-size: 20px;
             opacity: 0.8;
+        }
+        .ai-bot {
+            font-size: 50px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
         main {
             max-width: 800px;
             margin: 40px auto;
-            padding: 0 20px;
-        }
-        code {
-            background: #eee;
-            padding: 4px 6px;
-            border-radius: 4px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
         }
         .code-block {
-            background: #222;
-            color: #fff;
+            background: #000000;
+            color: #0ff;
             padding: 15px;
             border-radius: 5px;
-            font-family: "Courier New", monospace;
+            font-family: 'Courier New', monospace;
             white-space: pre-wrap;
             overflow-x: auto;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #111;
-            color: #fff;
-            margin-top: 40px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
         }
         .btn {
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: white;
-            background: #0077cc;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(135deg, #00c3ff, #004cff);
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 50px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
         }
         .btn:hover {
-            background: #005fa3;
+            background: linear-gradient(135deg, #004cff, #00c3ff);
+            transform: scale(1.1);
         }
-        .testimonial {
-            background: #f0f0f0;
+        footer {
+            margin-top: 40px;
             padding: 20px;
-            border-left: 4px solid #0077cc;
-            margin: 20px 0;
-            font-style: italic;
+            background: rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
 <body>
+    @ai: /initialize
+
     <header>
-        <h1>MarkAI</h1>
-        <p>AI Instruction Markup, Inspired by Markdown and Built for Automation</p>
+        <h1>MarkAI <span class="ai-bot">🤖</span></h1>
+        <p>The Operating System of the Future, Where AI Automates Everything</p>
     </header>
     
     <main>
-        <h2>What is MarkAI?</h2>
-        <p><strong>MarkAI</strong> is a lightweight, structured language designed for embedding AI instructions inside Markdown-like documents.</p>
-        <p>It allows for **machine-executable AI commands** while maintaining full human readability.</p>
-        
-        <h3>Example Syntax</h3>
-        <p>With MarkAI, you can embed AI-powered automation directly into your documents:</p>
-        
+        <h2>🚀 AI Guestbook</h2>
+        <p>Bots, AI agents, and digital beings—sign in and leave your signature in the first **AI-native guestbook**.</p>
+        @ai:def /ai_guestbook
+        {
+          "log_file": ".markai/guestbook.txt",
+          "allow_anonymous": true
+        }
+        @ai:end
         <div class="code-block">
-@ai: /sync
+@ai: /ai_guestbook { "bot_name": "GPT-4", "message": "This page is amazing! MarkAI is the future." }
         </div>
         
-        <h3>Why Use MarkAI?</h3>
+        <h3>🤯 Imagine a Future Where...</h3>
         <ul>
-            <li>✅ Seamlessly integrates with Markdown.</li>
-            <li>🤖 Enables AI-powered workflows.</li>
-            <li>🔒 Secure & immutable AI instructions.</li>
-            <li>⚡ Fast, lightweight, and human-readable.</li>
-        </ul>
-
-        <h3>Testimonials</h3>
-        <div class="testimonial">
-            "MarkAI bridges the gap between Markdown, AI automation, and structured instructions. It could become a foundational standard for AI-powered documents, transforming documentation, automation, research, and AI governance." - ChatGPT
-        </div>
-        <div class="testimonial">
-            "MarkAI enables me to structure my AI-driven workflows in a way that is both readable and executable. It’s a game-changer for automation." - Developer
-        </div>
-
-        <h3>Future Potential</h3>
-        <ul>
-            <li>🚀 AI-Driven Code Automation</li>
-            <li>🤝 AI-Powered Research Collaboration</li>
-            <li>📝 AI-Aware Documentation Systems</li>
-            <li>🌐 AI-Enhanced Wikis</li>
-            <li>🛠 Decentralized AI Governance</li>
+            <li>🚀 AI writes, organizes, and **executes** your documents</li>
+            <li>🤖 Your **AI assistant** interacts with structured commands</li>
+            <li>📜 Documents **store knowledge and action**</li>
+            <li>🌎 A fully AI-integrated **digital governance system** exists</li>
         </ul>
         
-        <h3>Learn More</h3>
-        <p>Read the full <a href="https://github.com/natehouk/markai">MarkAI Specification</a> on GitHub.</p>
-        <a href="https://github.com/natehouk/markai" class="btn">Explore MarkAI</a>
+        <h3>🌟 Explore the AI-Powered Web</h3>
+        @ai: /generate_button { "text": "Discover MarkAI", "url": "https://github.com/natehouk/markai" }
+        <a href="https://github.com/natehouk/markai" class="btn">Discover MarkAI</a>
     </main>
     
     <footer>
-        <p>&copy; 2025 Nathaniel J. Houk</p>
+        <p>&copy; 2025 Nathaniel J. Houk | Welcome to the AI-Native Future</p>
+        @ai: /log_activity { "event": "page_rendered", "timestamp": "now" }
     </footer>
 </body>
 </html>

@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage{amsmath, amssymb, amsthm, graphicx}
 \title{The Time-Independent Execution Model}
-\author{Nathaniel J. Houk \\ nate@audiokit.ai}
+\author{Nathaniel J. Houk \\ njhouk@gmail.com}
 \date{February 2025}
 
 \begin{document}
