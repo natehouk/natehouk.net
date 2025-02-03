@@ -209,8 +209,8 @@ Witten, E. (1995). \textit{String Theory Dynamics in Various Dimensions}. Nuclea
 \bibitem{Cook1971}
 Cook, S.A. (1971). \textit{The Complexity of Theorem-Proving Procedures}. STOC.
 \bibitem{Houk2025Timezones} Nathaniel J. Houk, "The Irrelevance of Timezones", Journal of Distributed Systems, 2025, DOI:10.1234/houk2025timezones.
-\bibitem{Houk2024Timeproof} 
-Houk, N. J. (2024). \textit{Timeproof: A Protocol for Probabilistic Verification via Blockchain Timestamps}. Independent Research.
+\bibitem{Houk2025Timeproof} 
+Houk, N. J. (2025). \textit{Timeproof: A Protocol for Probabilistic Verification via Blockchain Timestamps}. Independent Research.
 \end{thebibliography}
 
 \subsection{Connection to Incompleteness Theorems}

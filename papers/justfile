@@ -11,15 +11,10 @@ copy:
 # Compile PDFs from .tex files with error detection and verbose output
 compile:
     for f in *.tex; do \
-        echo "Compiling $f..."; \
-        pdflatex -halt-on-error -interaction=nonstopmode -file-line-error "$f"; \
-        if [ $? -ne 0 ]; then \
-            echo "Error compiling $f"; \
-            exit 1; \
-        else \
-            echo "$f compiled successfully."; \
-        fi; \
-        echo ""; \
+        pdflatex -halt-on-error "$f"; \
+        bibtex "${f%.tex}"; \
+        pdflatex -halt-on-error "$f"; \
+        pdflatex -halt-on-error "$f"; \
     done
 
 # Remove all generated files including outputs
