@@ -115,6 +115,51 @@
             color: #555;
             border-top: 1px solid #ccc;
         }
+
+        .content-article {
+            text-align: left;
+            line-height: 1.6;
+            margin: 40px 0;
+        }
+
+        .content-article h2, .content-article h3, .content-article h4 {
+            margin: 30px 0 20px;
+        }
+
+        .content-article p {
+            margin-bottom: 20px;
+        }
+
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .lead {
+            font-size: 1.2em;
+            color: #555;
+            margin: 30px 0;
+        }
+
+        .join-revolution {
+            background: #f8f9fa;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .nes-btn.primary {
+            background: #007bff;
+            color: white;
+            border-color: #0056b3;
+        }
+
+        .nes-btn.primary:hover {
+            background: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -134,17 +179,84 @@
                 <p>AI System Status: ONLINE</p>
                 <p>Current Version: 1.1</p>
                 <p>AI Agents Active: 3</p>
+                <p>System Health: Optimal</p>
+                <p>Neural Processing Units: Active</p>
             </div>
 
-            <section class="nes-container with-title">
-                <h2 class="title">Features</h2>
-                <div class="lists">
-                    <ul class="nes-list is-disc">
-                        <li>🤖 AI-Native Architecture</li>
-                        <li>📝 Self-Documenting Systems</li>
-                        <li>🔄 Autonomous Workflows</li>
-                        <li>🔐 Decentralized AI Governance</li>
+            <article class="content-article">
+                <h2>🚀 Welcome to the AI-Native Revolution</h2>
+                
+                <p class="lead">MarkAI isn't just another operating system—it's the dawn of a new computing paradigm where AI isn't just a feature, it's the foundation.</p>
+
+                <h3>🌟 Why MarkAI Changes Everything</h3>
+                <p>In the history of computing, we've witnessed several paradigm shifts: from command-line to GUI, from desktop to mobile, from local to cloud. Now, we're standing at the precipice of the most significant shift yet: the transition to AI-native computing.</p>
+
+                <div class="highlight-box">
+                    <h4>🔮 The Future is AI-Native</h4>
+                    <p>Imagine an operating system that:</p>
+                    <ul>
+                        <li>🤯 Understands your intentions, not just your commands</li>
+                        <li>🔄 Self-optimizes based on your usage patterns</li>
+                        <li>🛠️ Automatically debugs and repairs itself</li>
+                        <li>📚 Learns and evolves with every interaction</li>
                     </ul>
+                </div>
+
+                <h3>🏗️ Architecture That Thinks</h3>
+                <p>MarkAI's revolutionary architecture places AI agents at every system level:</p>
+                <ul>
+                    <li>🧠 Neural Kernel: AI-optimized system operations</li>
+                    <li>🤖 Autonomous Agents: Specialized AI workers for specific tasks</li>
+                    <li>🔄 Self-Healing Systems: Continuous optimization and repair</li>
+                    <li>🔐 Decentralized Intelligence: Distributed decision-making</li>
+                </ul>
+
+                <div class="terminal">
+                    <div class="ai-command">@ai: /demonstrate_capability</div>
+                    @ai:def /system_overview
+                    {
+                        "version": "1.1",
+                        "capabilities": ["neural_processing", "autonomous_agents", "self_repair"],
+                        "mode": "demonstration"
+                    }
+                    @ai:end
+                </div>
+
+                <h3>💡 Real-World Applications</h3>
+                <p>MarkAI is already transforming:</p>
+                <ul>
+                    <li>🏢 Enterprise Systems: Self-managing infrastructure</li>
+                    <li>🔬 Research Platforms: Autonomous experimentation</li>
+                    <li>🏭 Industrial Operations: Intelligent process control</li>
+                    <li>🏥 Healthcare Systems: Adaptive patient care</li>
+                </ul>
+
+                <div class="terminal">
+                    <div class="ai-command">@ai: /show_metrics</div>
+                    @ai:def /performance_stats
+                    {
+                        "version": "1.1",
+                        "metrics": ["efficiency", "reliability", "adaptation_rate"],
+                        "timeframe": "last_30_days"
+                    }
+                    @ai:end
+                </div>
+
+                <h3>🌈 The Road Ahead</h3>
+                <p>As we move towards v2.0, MarkAI is pioneering:</p>
+                <ul>
+                    <li>🧬 Evolutionary Computing: Systems that grow and adapt</li>
+                    <li>🤝 Collective Intelligence: Shared learning across instances</li>
+                    <li>🎯 Predictive Operations: Anticipatory system management</li>
+                </ul>
+            </article>
+
+            <section class="join-revolution">
+                <h2>🚀 Join the AI-Native Revolution</h2>
+                <div class="buttons">
+                    <a href="https://github.com/natehouk/markai" class="nes-btn primary">Download MarkAI</a>
+                    <a href="https://github.com/natehouk/markai/blob/main/SPEC_v1.1.md" class="nes-btn">View v1.1 Spec</a>
+                    <a href="#contribute" class="nes-btn">Contribute</a>
                 </div>
             </section>
 
@@ -152,22 +264,25 @@
                 <div class="ai-command">@ai: /demo_guestbook</div>
                 @ai:def /ai_guestbook
                 {
+                    "version": "1.1",
                     "log_file": ".markai/guestbook.txt",
-                    "allow_anonymous": true
+                    "allow_anonymous": true,
+                    "sentiment_analysis": true
                 }
                 @ai:end
-            </div>
-
-            <div class="buttons">
-                <a href="https://github.com/natehouk/markai" class="nes-btn">Download MarkAI</a>
-                <a href="https://github.com/natehouk/markai/blob/main/MARKAI_V1.0.md" class="nes-btn">View v1.0 Spec</a>
             </div>
         </main>
     </div>
 
     <footer>
         <p>&copy; 2025 Nathaniel J. Houk | Powered by MarkAI v1.1</p>
-        @ai: /log_activity { "event": "page_rendered", "timestamp": "now" }
+        @ai: /log_activity 
+        {
+            "version": "1.1",
+            "event": "page_rendered",
+            "timestamp": "now",
+            "analytics_enabled": true
+        }
     </footer>
 
 </body>
