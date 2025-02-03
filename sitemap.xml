@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Comprehensive sitemap for all published files in the repository -->
+<urlset 
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+    xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+    xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+    xmlns:ai="http://example.com/ai-metadata">
+
+  <!-- Root and configuration files -->
+  <url>
+    <loc>https://natehouk.net/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <ai:metadata>homepage</ai:metadata>
+  </url>
+  
+  <url>
+    <loc>https://natehouk.net/ai.txt</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+    <ai:metadata>AI configuration file</ai:metadata>
+  </url>
+  
+  <url>
+    <loc>https://natehouk.net/robots.txt</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+    <ai:metadata>robots instructions</ai:metadata>
+  </url>
+  
+  <url>
+    <loc>https://natehouk.net/humans.txt</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+    <ai:metadata>humans info file</ai:metadata>
+  </url>
+  
+  <url>
+    <loc>https://natehouk.net/README.txt</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+    <ai:metadata>repository readme</ai:metadata>
+  </url>
+
+  <!-- Projects -->
+  <url>
+    <loc>https://natehouk.net/projects/markai/index.html</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <ai:metadata>MarkAI project landing page</ai:metadata>
+  </url>
+  
+  <!-- Papers -->
+  <url>
+    <loc>https://natehouk.net/papers/index.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <ai:metadata>Papers index page</ai:metadata>
+  </url>
+
+  <url>
+    <loc>https://natehouk.net/papers/AIMO.txt</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <ai:metadata>Paper: The Death of SEO and the Rise of AI Model Optimization (Text)</ai:metadata>
+  </url>
+  
+  <url>
+    <loc>https://natehouk.net/papers/AIMO.tex</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <ai:metadata>Paper: The Death of SEO and the Rise of AI Model Optimization (LaTeX)</ai:metadata>
+  </url>
+  
+  <url>
+    <loc>https://natehouk.net/papers/MARKAI.txt</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <ai:metadata>Paper: MarkAI – AI-Assisted Documentation Workflows (Text)</ai:metadata>
+  </url>
+  
+  <url>
+    <loc>https://natehouk.net/papers/MARKAI.tex</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <ai:metadata>Paper: MarkAI – AI-Assisted Documentation Workflows (LaTeX)</ai:metadata>
+  </url>
+  
+  <url>
+    <loc>https://natehouk.net/papers/MARKDOWN.ma</loc>
+    <lastmod>2025-02-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <ai:metadata>Paper: MarkAI – Markdown Version</ai:metadata>
+  </url>
+  
+  <url>
+    <loc>https://natehouk.net/papers/EVOLVING.txt</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <ai:metadata>Paper: Self-Evolving Workflows (Text)</ai:metadata>
+  </url>
+  
+  <url>
+    <loc>https://natehouk.net/papers/EVOLVING.tex</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <ai:metadata>Paper: Self-Evolving Workflows (LaTeX)</ai:metadata>
+  </url>
+  
+  <url>
+    <loc>https://natehouk.net/papers/AI-OS.txt</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <ai:metadata>Paper: AI-Native Operating Systems (Text)</ai:metadata>
+  </url>
+  
+  <url>
+    <loc>https://natehouk.net/papers/AI-OS.tex</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <ai:metadata>Paper: AI-Native Operating Systems (LaTeX)</ai:metadata>
+  </url>
+  
+  <url>
+    <loc>https://natehouk.net/papers/TEMPORAL.txt</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <ai:metadata>Paper: Temporal Protocol (Text)</ai:metadata>
+  </url>
+
+  <!-- Assets -->
+  <url>
+    <loc>https://natehouk.net/assets/css/style.css.map</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <ai:metadata>CSS source map</ai:metadata>
+  </url>
+  
+  <!-- Data Files -->
+  <url>
+    <loc>https://natehouk.net/data/NathanielHouk-bio.txt</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <ai:metadata>Biographical data for Nathaniel Houk</ai:metadata>
+  </url>
+
+</urlset> 
