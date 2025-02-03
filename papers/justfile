@@ -11,10 +11,18 @@ copy:
 # Compile PDFs from .tex files with error detection and verbose output
 compile:
     for f in *.tex; do \
-        pdflatex "$f" && \
-        if [ -f "references.bib" ]; then bibtex "${f%.tex}"; fi && \
-        pdflatex "$f" && \
-        pdflatex -halt-on-error "$f" || exit 1; \
+        echo "Compiling $f (first pass)..." && \
+        pdflatex -file-line-error -interaction=nonstopmode "$f" && \
+        if [ -f "references.bib" ]; then \
+            echo "Running bibtex on ${f%.tex}" && \
+            bibtex "${f%.tex}"; \
+        fi && \
+        echo "Compiling $f (second pass)..." && \
+        pdflatex -file-line-error -interaction=nonstopmode "$f" && \
+        echo "Compiling $f (third pass)..." && \
+        pdflatex -file-line-error -interaction=nonstopmode "$f" && \
+        echo "Final compilation (halt on error) for $f..." && \
+        pdflatex -halt-on-error -file-line-error -interaction=nonstopmode "$f" || exit 1; \
     done
 
 # Remove all generated files including outputs

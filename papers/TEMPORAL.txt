@@ -1,0 +1,170 @@
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[unicode=true, pdfencoding=auto]{hyperref}
+\usepackage{microtype}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{cleveref}
+\usepackage{siunitx}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\onehalfspacing
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{AI-Timeproof Protocol}
+\fancyhead[RE,LO]{N. J. Houk}
+\fancyfoot[CE,CO]{\thepage}
+
+\begin{document}
+
+\title{The AI-Timeproof Protocol: Decentralized AI Verification Using Temporal Persistence}
+\author{Nathaniel Joseph Houk\\
+Independent Researcher\\
+\textit{Email:} \href{mailto:njhouk@gmail.com}{njhouk@gmail.com}}
+\date{July 2025}
+\maketitle
+
+\begin{abstract}
+The rapid advancement of AI models raises concerns regarding the verifiability and trustworthiness of their outputs over time. We introduce the \textbf{AI-Timeproof Protocol}, a decentralized framework for verifying AI-generated content through temporal persistence. Inspired by blockchain-based timestamping and cryptographic proof mechanisms, the protocol ensures that AI claims remain provably authentic long after their creation. We propose a novel \textbf{Weibull-based Verification Function (WVF)} to quantify the probability that an AI-generated claim remains unchanged over time, and we introduce \textbf{Verifiable Delay Functions (VDFs)} to enforce time-dependent validation constraints. Our approach enables AI models to cryptographically commit to outputs, ensuring accountability and preventing post hoc tampering. This work lays the foundation for trustless AI governance, enabling decentralized AI auditing, compliance tracking, and secure AI model execution verification.
+\end{abstract}
+
+\section{Introduction}
+
+AI models generate an increasing volume of outputs that impact legal, financial, and scientific domains. However, ensuring the long-term integrity of AI-generated claims presents a challenge. Current verification mechanisms either rely on \textbf{centralized trust} (e.g., model logs) or \textbf{static cryptographic signatures} (e.g., hash commitments), which fail to provide probabilistic guarantees of temporal persistence. We propose a \textbf{probabilistic, time-dependent verification model} that enhances AI output accountability while remaining decentralized.
+
+Key contributions of this paper:
+\begin{enumerate}
+    \item \textbf{Weibull-Based Verification Function (WVF):} A probabilistic model for assessing the likelihood that an AI-generated claim remains unaltered over time.
+    \item \textbf{Verifiable Delay Functions (VDFs) for AI Proofs:} Enforcing cryptographic delays in AI output verification to ensure time-sensitive commitment mechanisms.
+    \item \textbf{Decentralized AI Model Governance:} AI models cryptographically commit to execution logs on a blockchain, preventing unauthorized modifications.
+    \item \textbf{Trustless AI Compliance Auditing:} Using blockchain-based storage and zk-SNARKs to verify AI claims without exposing proprietary data.
+\end{enumerate}
+
+\section{Theoretical Foundations}
+
+\subsection{Probabilistic Verification of AI Claims}
+
+Let \( C \) be an AI-generated claim at time \( t_0 \). The probability that \( C \) remains unchanged at time \( t \) is modeled using the Weibull distribution:
+\[
+P(C_t = C_{t_0}) = e^{-(\lambda (t - t_0))^k}
+\]
+where:
+\begin{itemize}
+    \item \( \lambda \) represents the claim's decay rate (i.e., risk of modification over time),
+    \item \( k \) is the shape parameter, which adjusts sensitivity to time-dependent decay.
+\end{itemize}
+This function provides a \textbf{probabilistic guarantee} rather than a binary assertion, making it more flexible than traditional cryptographic commitments.
+
+\subsection{Verifiable Delay Functions (VDFs) for AI Execution}
+
+A \textbf{Verifiable Delay Function (VDF)} enforces a time delay before verification can be completed. We define a delay-enforced AI commitment scheme:
+\begin{enumerate}
+    \item An AI model generates output \( C \) and commits to it via a cryptographic hash \( H(C) \).
+    \item The hash is recorded on a blockchain, along with a time-lock enforced by a VDF.
+    \item Verification is only possible after computing \( f(C) \), which requires solving a sequential computational problem (e.g., repeated squaring in a prime field).
+\end{enumerate}
+This approach ensures that \textbf{tampering with an AI-generated claim after the fact is computationally infeasible}.
+
+\subsection{Understanding Verifiable Delay Functions (VDFs)}
+
+A \textbf{Verifiable Delay Function (VDF)} is a cryptographic construct that requires a predetermined amount of sequential computation to evaluate while being efficiently verifiable. VDFs serve as proof that a given period has elapsed before verification can take place.
+
+Mathematically, a VDF consists of three key components:
+\begin{enumerate}
+    \item \textbf{Setup:} A function \( G \) generates public parameters \( pp \) based on security constraints.
+    \item \textbf{Evaluation:} A function \( Eval \) computes the output \( y = f(x) \) after a delay of \( T \) steps:
+    \[
+    y = f^T(x) \mod N
+    \]
+    where \( N \) is a large prime number, and the computation must be performed sequentially.
+    \item \textbf{Verification:} A function \( Verify \) ensures that \( y \) is correct using an efficiently computable proof.
+\end{enumerate}
+Common constructions of VDFs involve repeated squaring in a modular arithmetic setting. The delay constraint ensures that AI-generated claims cannot be verified before the predefined time has elapsed, making them ideal for enforcing time-sensitive commitments in decentralized AI verification.
+
+\section{Protocol Design}
+
+\subsection{AI Commitment Phase}
+\begin{enumerate}
+    \item \textbf{AI Model Execution:} AI generates output \( C \).
+    \item \textbf{Hash Commitment:} Compute \( H(C) \) and store on the blockchain.
+    \item \textbf{VDF Time-Lock:} Attach a VDF constraint, preventing immediate verification.
+\end{enumerate}
+
+\subsection{Verification Phase}
+\begin{enumerate}
+    \item \textbf{Unlocking with VDF:} After the delay period, compute \( f(C) \) to unlock verification.
+    \item \textbf{Cross-Validation with Weibull Function:} Assess the probability of claim persistence using WVF.
+    \item \textbf{zk-SNARK Proofs for Compliance:} Generate a zero-knowledge proof ensuring execution constraints were followed.
+\end{enumerate}
+
+\section{Practical Workflow of the Protocol}
+
+\begin{enumerate}
+    \item \textbf{AI Model Generates an Output}
+    \begin{itemize}
+        \item The AI system produces an output (e.g., text, image, or dataset).
+        \item This output is processed into a standardized digital format.
+    \end{itemize}
+    \item \textbf{Hashing and Commitment}
+    \begin{itemize}
+        \item A cryptographic hash (e.g., SHA-256) is computed for the AI output.
+        \item This hash serves as a commitment and is recorded on a decentralized blockchain.
+    \end{itemize}
+    \item \textbf{Applying a Verifiable Delay Function (VDF)}
+    \begin{itemize}
+        \item The system enforces a time-lock mechanism using a VDF.
+        \item The hash cannot be immediately verified, ensuring no premature modifications.
+    \end{itemize}
+    \item \textbf{Blockchain Storage and Timestamping}
+    \begin{itemize}
+        \item The commitment hash is stored in a tamper-proof ledger.
+        \item A timestamp is recorded to establish a temporal reference.
+    \end{itemize}
+    \item \textbf{Verification Unlocking and Validation}
+    \begin{itemize}
+        \item After the predefined time delay, the verifier solves the VDF.
+        \item The AI claim is cross-validated using the Weibull function.
+    \end{itemize}
+    \item \textbf{Zero-Knowledge Proofs (zk-SNARKs) for Compliance}
+    \begin{itemize}
+        \item To ensure compliance and correctness, zk-SNARKs are generated.
+        \item These proofs confirm that the AI-generated claim was executed according to its predefined constraints without revealing sensitive model details.
+    \end{itemize}
+    \item \textbf{Final Verification and Auditability}
+    \begin{itemize}
+        \item If the verification passes, the AI-generated claim is considered valid and persistent.
+        \item If any modifications are detected, the system flags the claim for further review.
+    \end{itemize}
+\end{enumerate}
+This workflow ensures that AI-generated claims remain verifiable, resistant to tampering, and traceable over time.
+
+\section{Implementation \& Security Analysis}
+
+\begin{itemize}
+    \item \textbf{Decentralization:} No single entity controls verification.
+    \item \textbf{Tamper-Resistance:} Modifications require infeasible computation due to VDF constraints.
+    \item \textbf{Privacy-Preserving Auditing:} zk-SNARKs allow verifiable claims without exposing proprietary AI models.
+\end{itemize}
+
+\section{Conclusion}
+
+The AI-Timeproof Protocol provides a \textbf{probabilistic, decentralized, and time-enforced verification mechanism} for AI-generated claims. By integrating \textbf{Weibull-based probability modeling}, \textbf{VDF-enforced commitments}, and \textbf{zero-knowledge proofs}, we establish a \textbf{trustless AI verification framework} that enhances long-term AI accountability. This protocol enables decentralized AI auditing, regulatory compliance, and verifiable AI model execution, addressing critical challenges in AI governance.
+
+\bigskip
+\noindent\textbf{Keywords:} AI verification, probabilistic AI governance, Verifiable Delay Functions, zk-SNARKs, blockchain-based AI auditing.
+
+\begin{thebibliography}{9}
+\bibitem{houk2025} Nathaniel J. Houk, \textit{AI-Timeproof Protocol: Decentralized Verification}, 2025.
+\bibitem{nakamoto2008} Satoshi Nakamoto, \textit{Bitcoin: A Peer-to-Peer Electronic Cash System}, 2008.
+\end{thebibliography}
+
+\end{document}
