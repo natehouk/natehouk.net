@@ -53,7 +53,7 @@ Credits
 Contact
 -------
 Email: nate.houk@gmail.com
-Website: https://natehouk.dev
+Website: https://natehouk.net
 GitHub: https://github.com/natehouk
 
 License
