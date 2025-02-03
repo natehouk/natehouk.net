@@ -3,21 +3,11 @@
 \usepackage{graphicx}
 \usepackage{amsmath, amssymb}
 \usepackage{listings}
-\usepackage[margin=1in]{geometry}
-
-% Add these settings for listings
-\lstset{
-    breaklines=true,    % Enable automatic line breaking
-    postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookrightarrow}},
-    basicstyle=\ttfamily\small,
-    columns=flexible
-}
+\usepackage{texorpdfstring}
 
 \title{MarkAI: AI-Assisted Documentation Workflows}
-\author{Nathaniel J. Houk\\
-\textit{Independent Researcher}\\
-\href{mailto:njhouk@gmail.com}{njhouk@gmail.com}}
-\date{July 2025}
+\author{Nathaniel J. Houk \\ njhouk@gmail.com}
+\date{February 2025}
 
 \begin{document}
 \maketitle
