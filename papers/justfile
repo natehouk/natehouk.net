@@ -14,15 +14,20 @@ delete:
 
 # Recipe to copy each .tex file to a .txt file (for your personal reference)
 copy:
-    for file in *.tex; do cp "$$file" "$${file%.tex}.txt"; done
+    find . -maxdepth 1 -type f -name '*.tex' -print0 | while IFS= read -r -d '' file; do \
+        dest="$$(basename "$$file" .tex).txt"; \
+        cp "$$file" "$$dest"; \
+    done
 
 # Recipe to compile each .tex file into a PDF using pdflatex
 compile:
-    for file in *.tex; do pdflatex "$$file"; done
+    find . -maxdepth 1 -type f -name '*.tex' -print0 | while IFS= read -r -d '' file; do \
+        pdflatex "$$file"; \
+    done
 
 # Clean up intermediate files generated during LaTeX compilation.
 # This command only deletes files with the following extensions:
-# .aux, .log, .synctex.gz, .out, .toc, .fls, .fdb_latexmk
+# .aux, .log, .synctex.gz, .out, .toc, .fls, and .fdb_latexmk.
 clean:
     find . -maxdepth 1 -type f \( \
         -name "*.aux" -o \
