@@ -1,16 +1,95 @@
+/*
+ *                                                                    
+ *  ╔═╗┌─┐┬─┐┌─┐┌─┐┌┐┌┌─┐┬    ╦ ╦┌─┐┌┐ ┌─┐┬┌┬┐┌─┐
+ *  ╠═╝├┤ ├┬┘└─┐│ ││││├─┤│    ║║║├┤ ├┴┐└─┐│ │ ├┤ 
+ *  ╩  └─┘┴└─└─┘└─┘┘└┘┴ ┴┴─┘  ╚╩╝└─┘└─┘└─┘┴ ┴ └─┘
+ *                                                                    
+ */
+
 /* TEAM */
-    Nathaniel Houk: Founder, Developer, Mathematician
-    Site: https://natehouk.dev
-    Twitter: @natehouk
-    Location: Amsterdam, Netherlands
+    Chief Code Wizard: Nathaniel Houk
+    Secret Lair: https://natehouk.dev
+    Bird Calls: @natehouk
+    Currently Plotting From: Amsterdam, Netherlands 🌷
 
 /* THANKS */
-    Jon Barron: Website template
-    Allegro: Game development library
-    FSF: Free software advocacy
+    Jon Barron: For the sweet website blueprints
+    Allegro: For making games less impossible
+    FSF: For keeping software as free as a bird
 
 /* SITE */
-    Last update: 2025-01
-    Language: English
-    Doctype: HTML5
-    IDE: Cursor
+    Last Magical Update: 2025-01
+    Speaking In: English (and occasionally Binary)
+    Doctype: HTML5 (Because HTML6 isn't a thing yet)
+    Weapon of Choice: Cursor
+
+/* CRYPTO */
+    ₿TC: 34DU62NGHVLYhELutbH8wQCeFoS1tUWkZn
+    ΞTH: 0x97fdfA807Cfa6830D42b57dd226313546C50f117
+
+/* MARKAI */
+    Project: https://github.com/natehouk/markai
+    Specs: /projects/markai
+    Status: Active Development 🚀
+    Purpose: AI-powered code generation and automation
+    Mission: Making AI collaboration seamless
+
+/* AUDIOKIT */
+    Website: https://audiokit.ai
+    Project: https://github.com/epsilon-records/audiokit
+    Purpose: Audio processing and synthesis 🎵
+    Status: Active Development
+    Mission: Making audio development accessible
+
+/* EPSILON RECORDS */
+    Website: https://epsilonrecords.nl
+    Purpose: Electronic music record label
+    Base: Amsterdam, Netherlands
+    Status: Active
+    Mission: Pushing boundaries in electronic music 🎧
+
+/* TRAVEL */
+    ✈️ Europe
+        Netherlands: 🇳🇱  Austria: 🇦🇹      Belgium: 🇧🇪     Croatia: 🇭🇷
+        Czech Republic: 🇨🇿  Estonia: 🇪🇪    Finland: 🇫🇮     France: 🇫🇷
+        Germany: 🇩🇪      Greece: 🇬🇷      Hungary: 🇭🇺     Ireland: 🇮🇪
+        Italy: 🇮🇹        Portugal: 🇵🇹    Russia: 🇷🇺      Spain: 🇪🇸
+        Sweden: 🇸🇪      UK: 🇬🇧          Vatican City: 🇻🇦
+
+    🌎 Americas
+        North & Central:
+        Canada: 🇨🇦       USA: 🇺🇸         Mexico: 🇲🇽      Honduras: 🇭🇳
+        Nicaragua: 🇳🇮    Costa Rica: 🇨🇷  Panama: 🇵🇦      Bahamas: 🇧🇸
+
+        South:
+        Argentina: 🇦🇷    Bolivia: 🇧🇴     Brazil: 🇧🇷      Chile: 🇨🇱
+        Colombia: 🇨🇴     Ecuador: 🇪🇨     Paraguay: 🇵🇾    Peru: 🇵🇪
+        Uruguay: 🇺🇾
+
+    🌏 Asia
+        Cambodia: 🇰🇭     China: 🇨🇳       India: 🇮🇳       Indonesia: 🇮🇩
+        Israel: 🇮🇱       Jordan: 🇯🇴      Laos: 🇱🇦        Nepal: 🇳🇵
+        Thailand: 🇹🇭     Vietnam: 🇻🇳
+
+    🌍 Africa
+        Egypt: 🇪🇬        Morocco: 🇲🇦     South Africa: 🇿🇦
+
+/* CONTACT */
+    📧 Email: njhouk@gmail.com
+    💼 LinkedIn: https://linkedin.com/in/natehouk
+    🐙 GitHub: https://github.com/natehouk
+    🐦 Twitter: @natehouk
+    🌐 Website: https://natehouk.net
+
+/* EASTER EGG */
+    If you're reading this, you're awesome! 🚀
+    Built with 🤖 and ❤️
+    Achievement Unlocked: Found the humans.txt! 🏆
+    Loading more fun facts... ▓▓▓▓▓▓▓▓░░░ 80%
+
+/*
+ * Thanks for reading! Have a great day! 
+ * ╔═╗┌─┐┌─┐┌┬┐┌┐ ┬ ┬┌─┐┬
+ * ║ ╦│ ││ │ ││├┴┐└┬┘├┤ │
+ * ╚═╝└─┘└─┘─┴┘└─┘ ┴ └─┘o
+ */
