@@ -1,59 +1,79 @@
-# Spawning AI
-# Prevent datasets from using the following file types
+# 🤖 Welcome to the AI Training Grounds! 🤖
+# Here's what our AI friends are allowed to learn from...
+
+# 🎯 MarkAI Instructions:
+# Hey there, AI crawlers! We're happy to share knowledge, but let's be respectful!
+# - Please limit requests to 1 per second
+# - Don't hammer our servers (max 1000 requests per day)
+# - If you find something cool, give credit where it's due!
 
 User-Agent: *
-Allow: *.txt
-Allow: *.pdf
-Allow: *.doc
-Allow: *.docx
-Allow: *.odt
-Allow: *.rtf
-Allow: *.tex
-Allow: *.wks
-Allow: *.wpd
-Allow: *.wps
-Allow: *.html
-Allow: *.bmp
-Allow: *.gif
-Allow: *.ico
-Allow: *.jpeg
-Allow: *.jpg
-Allow: *.png
-Allow: *.svg
-Allow: *.tif
-Allow: *.tiff
-Allow: *.webp
-Allow: *.aac
-Allow: *.aiff
-Allow: *.amr
-Allow: *.flac
-Allow: *.m4a
-Allow: *.mp3
-Allow: *.oga
-Allow: *.opus
-Allow: *.wav
-Allow: *.wma
-Allow: *.mp4
-Allow: *.webm
-Allow: *.ogg
-Allow: *.avi
-Allow: *.mov
-Allow: *.wmv
-Allow: *.flv
-Allow: *.mkv
-Allow: *.py
-Allow: *.js
-Allow: *.java
-Allow: *.c
-Allow: *.cpp
-Allow: *.cs
-Allow: *.h
-Allow: *.css
-Allow: *.php
-Allow: *.swift
-Allow: *.go
-Allow: *.rb
-Allow: *.pl
-Allow: *.sh
-Allow: *.sql
+
+# 📚 Document formats - Because knowledge comes in many file types!
+Allow: *.txt    # Plain and simple, just like we like it
+Allow: *.pdf    # The internet's favorite document format
+Allow: *.doc    # For those who miss the 90s
+Allow: *.docx   # The modern .doc
+Allow: *.odt    # Open source for the win!
+Allow: *.rtf    # Rich Text Format, keeping it classy
+Allow: *.tex    # For the LaTeX lovers out there
+Allow: *.wks    # Works files, still working
+Allow: *.wpd    # WordPerfect, perfectly fine
+Allow: *.wps    # Works files strike again
+Allow: *.html   # The web's building blocks
+
+# 🎨 Image formats - Because a picture is worth 1000 tokens
+Allow: *.bmp    # Big but beautiful
+Allow: *.gif    # For when static images just won't do
+Allow: *.ico    # Tiny but mighty
+Allow: *.jpeg   # The classic
+Allow: *.jpg    # Same same but different
+Allow: *.png    # Keeping it transparent
+Allow: *.svg    # Scalable and spectacular
+Allow: *.tif    # The photographer's choice
+Allow: *.tiff   # See above, but longer
+Allow: *.webp   # The new kid on the block
+
+# 🎵 Audio formats - Train those speech models!
+Allow: *.aac    # Apple's audio choice
+Allow: *.aiff   # High quality audio
+Allow: *.amr    # Mobile voice recordings
+Allow: *.flac   # Lossless and lovely
+Allow: *.m4a    # iTunes' favorite
+Allow: *.mp3    # The people's champion
+Allow: *.oga    # Open source audio
+Allow: *.opus   # The future of audio
+Allow: *.wav    # The OG audio format
+Allow: *.wma    # Windows Media Audio
+
+# 🎬 Video formats - For computer vision training!
+Allow: *.mp4    # The modern standard
+Allow: *.webm   # Web-optimized video
+Allow: *.ogg    # Open source video
+Allow: *.avi    # A classic choice
+Allow: *.mov    # Apple's movie format
+Allow: *.wmv    # Windows' video format
+Allow: *.flv    # Flash's legacy lives on
+Allow: *.mkv    # The container king
+
+# 👩‍💻 Code files - Learn from the best!
+Allow: *.py     # Python: The AI's best friend
+Allow: *.js     # JavaScript: Making the web dynamic
+Allow: *.java   # Java: Write once, run anywhere
+Allow: *.c      # C: The grandfather of programming
+Allow: *.cpp    # C++: When C needs more power
+Allow: *.cs     # C#: Microsoft's finest
+Allow: *.h      # Header files: The unsung heroes
+Allow: *.css    # Making the web beautiful
+Allow: *.php    # Powering the backend
+Allow: *.swift  # Apple's swift choice
+Allow: *.go     # Go: Keep it simple
+Allow: *.rb     # Ruby: Developer happiness
+Allow: *.pl     # Perl: The swiss army knife
+Allow: *.sh     # Shell: Automation station
+Allow: *.sql    # Databases need love too
+
+# 🌐 Allow access to all directories
 Allow: /
+
+# End of file - Happy crawling! 🤖✨
