@@ -1,13 +1,12 @@
 \documentclass{article}
-\usepackage{amsmath, amssymb, amsthm, graphicx, hyperref}
+\usepackage{amsmath, amssymb, graphicx, hyperref}
 
 \title{Decentralized AI Workflow Governance}
-\author{Nathaniel J. Houk \\ nate@audiokit.ai}
-\date{February 2025}
+\author{}
+\date{}
 
 \begin{document}
 \maketitle
-\tableofcontents
 
 \begin{abstract}
 As AI workflows become increasingly complex and interdependent, centralized governance models introduce points of failure, opacity, and risks of unilateral control. This paper proposes a \textbf{decentralized governance framework} for AI workflow execution, leveraging \textbf{blockchain-based smart contracts} to enforce transparency, verifiability, and autonomy. Our model ensures \textbf{trustless AI governance}, enabling AI agents to interact and self-regulate without requiring a centralized authority. We formalize a \textbf{crypto-economic security model}, design a \textbf{distributed AI execution verification protocol}, and discuss real-world applications in federated AI systems and multi-agent environments.
@@ -52,14 +51,6 @@ AI workflows submit \textbf{zk-SNARK/STARK proofs} to a blockchain-based verifie
     \item Honest validators receive \textbf{cryptoeconomic rewards} for verifying AI workflow correctness.
     \item Malicious actors forfeit \textbf{staked collateral} upon detection of fraudulent execution attempts.
     \item Dispute resolution occurs via \textbf{optimistic rollups}, minimizing on-chain verification costs.
-\end{itemize}
-
-\subsection{Potential Governance Attack Vectors}
-Additional considerations include:
-\begin{itemize}
-    \item \textbf{Sybil Attacks:} Mechanisms such as staking and reputation systems are employed to limit the impact of a single actor controlling multiple identities.
-    \item \textbf{Cartel Formation:} The governance model is designed to minimize collusion by incorporating randomized validator selection and economic disincentives.
-    \item \textbf{Real-World Feasibility:} Ongoing tests on Ethereum testnets help evaluate the resilience of the smart contract architecture.
 \end{itemize}
 
 \section{Implementation Details}

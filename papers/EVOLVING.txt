@@ -1,20 +1,17 @@
 \documentclass{article}
-
-\usepackage{amsmath,amssymb,amsthm}
+\usepackage{amsmath, amssymb, amsthm, algorithm, algorithmic, graphicx, listings}
+\usepackage{geometry}
+\geometry{margin=1in}
 \usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{algorithm}
-\usepackage{algorithmic}
 \usepackage{url}
 
-\title{Self-Evolving AI Workflow Systems}
-\author{Nathaniel J. Houk \\ \texttt{nate@audiokit.ai}}
-
+\title{Self-Evolving Workflows}
+\author{Nathaniel J. Houk \\ nate@audiokit.ai}
 \date{February 2025}
 
 \begin{document}
-
 \maketitle
+\tableofcontents
 
 \begin{abstract}
 This paper presents a formal computational theory for self-evolving AI workflows. We explore recursive AI task delegation, self-modifying AI execution, and the emergence of autonomous optimization. Our approach models AI workflows as dynamically evolving dependency graphs, allowing systems to reconfigure and optimize execution pathways in response to changes in objectives and available resources. This work has implications for AI-driven automation, meta-learning, and continuous self-improvement in AI systems.
@@ -94,13 +91,12 @@ where $M_i$ are performance metrics (e.g., execution time, accuracy, computation
 \begin{algorithm}
 \caption{Self-Evolving Workflow Algorithm}
 \begin{algorithmic}
-    \STATE Initialize workflow \(W_0\) with predefined tasks
-    \FOR{each execution cycle \(t\)}
-        \STATE Compute state \(S_t\) based on past executions
-        \STATE Identify possible workflow modifications using AI meta‑learning techniques
-        \COMMENT{Meta‑learning methods (e.g. reinforcement learning, Bayesian optimization) continuously adjust strategies based on historical performance metrics.}
-        \STATE Apply \(W_{t+1} = g(W_t, S_t)\) if improvement is detected
-        \STATE Store \(S_t\) for future learning and iterative refinement
+    \STATE Initialize workflow $W_0$ with predefined tasks
+    \FOR{each execution cycle $t$}
+        \STATE Compute state $S_t$ based on past executions
+        \STATE Identify possible workflow modifications
+        \STATE Apply $W_{t+1} = g(W_t, S_t)$ if improvement is detected
+        \STATE Store $S_t$ for future learning
     \ENDFOR
 \end{algorithmic}
 \end{algorithm}
@@ -122,6 +118,9 @@ This paper introduced the concept of self-evolving AI workflow systems, providin
     \item Integrating explainability into the workflow evolution process.
     \item Real-world case studies validating our approach.
 \end{itemize}
+
+\section*{Acknowledgments}
+The author gratefully acknowledges the contributions of collaborators, funding sources, and peer reviewers whose insights have improved this work.
 
 \begin{thebibliography}{9}
 \bibitem{hutter2019automl} F. Hutter, L. Kotthoff, and J. Vanschoren, \textit{Automated Machine Learning}, Springer, 2019.

@@ -1,13 +1,13 @@
 \documentclass{article}
-\usepackage{amsmath, amssymb, amsthm, graphicx, hyperref}
+\usepackage{amsmath, amssymb, graphicx, hyperref}
 
-\title{AI-Native OS and Decentralized Workflow Verification}
-\author{Nathaniel J. Houk \\ nate@audiokit.ai}
-\date{February 2025}
+\title{AI-Native Operating Systems: Redefining Computation Through Autonomous AI Workflows}
+\author{Nathaniel J. Houk}
+\date{2025}
 
 \begin{document}
+
 \maketitle
-\tableofcontents
 
 \begin{abstract}
 This paper introduces the concept of an AI-Native Operating System (AI-Native OS), a fundamental rethinking of traditional operating systems to accommodate autonomous AI workflows. Unlike conventional OS architectures, which are designed around human-defined processes and application-centric models, an AI-Native OS operates as a fully autonomous environment where AI agents act as first-class citizens, capable of self-organization, continuous learning, and adaptive optimization. We explore the theoretical underpinnings, architectural design, and practical implications of such a system, including its impact on AI governance, computational efficiency, and scalability. The AI-Native OS represents a paradigm shift, redefining how computation is structured in an AI-first world.
@@ -99,14 +99,6 @@ AI-Native Operating Systems redefine how computation is structured in an AI-firs
     \item Reinforcement learning-driven scheduling and optimization.
 \end{itemize}
 Future research will explore hyperdimensional kernel architectures and quantum-AI integration.
-
-\section{Discussion}
-
-\subsection{Security Implications of Self-Modifying AI Workflows}
-Self-modifying AI workflows introduce challenges such as potential instability from uncontrolled modifications and increased attack surfaces. In our design, continuous monitoring, secure update protocols, and mandatory audit trails (e.g., via blockchain verification) are employed to mitigate these risks.
-
-\subsection{Comparison with Existing Distributed Frameworks}
-Unlike standard frameworks such as Kubernetes or Ray, the AI-Native OS employs reinforcement-learning based scheduling, which dynamically adapts to workload evolution while also incorporating decentralized security and governance mechanisms.
 
 \end{document}
 

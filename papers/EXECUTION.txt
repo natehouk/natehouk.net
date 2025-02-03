@@ -1,12 +1,12 @@
 \documentclass{article}
-\usepackage{amsmath, amssymb, graphicx}
-\title{Time-Independent AI Execution: A Dependency-Graph Model for Event-Driven AI Workflows}
-\author{Nathaniel J. Houk}
-\date{2025}
+\usepackage{amsmath, amssymb, amsthm, graphicx}
+\title{The Time-Independent Execution Model}
+\author{Nathaniel J. Houk \\ nate@audiokit.ai}
+\date{February 2025}
 
 \begin{document}
-
 \maketitle
+\tableofcontents
 
 \begin{abstract}
 In contemporary AI systems, execution models rely heavily on absolute timestamps, leading to synchronization challenges across distributed architectures. This paper introduces a \textbf{time-independent AI execution framework}, replacing absolute time references with a \textbf{dependency-graph model} for event-driven AI workflow orchestration. By structuring computations based on causality rather than timestamps, we propose a more robust, latency-tolerant, and globally consistent approach to AI task execution. This model is particularly relevant in decentralized AI networks, edge computing, and post-blockchain architectures, where deterministic execution is required across asynchronous environments.
@@ -62,7 +62,9 @@ Let $\sigma(T)$ represent the execution state of a task $T$. A task executes if 
 ensuring \textbf{strict causal order} across AI workflows.
 
 \subsection{Complexity Analysis}
-The complexity of resolving dependencies in a DAG structure is given by \textbf{topological sorting}, which operates in \textbf{$O(|N| + |E|)$ time}. This is significantly more efficient than network-wide clock synchronization methods, which require \textbf{$O(n \log n)$ operations}.
+The complexity of dependency resolution using topological sorting is \(O(|N|+|E|)\), which is more efficient compared to approaches relying on global timestamp synchronization, often requiring \(O(n \log n)\) operations.
+
+In practical implementations, the event-driven DAG model helps decouple execution order from network-induced latency and inconsistencies, though challenges remain in robust event propagation and fault-tolerance in decentralized networks.
 
 \section{Implementation Considerations}
 \subsection{Practical AI Execution Frameworks}

@@ -4,12 +4,13 @@
 \usepackage{amsmath, amssymb}
 \usepackage{listings}
 
-\title{AI-Augmented Documentation: A Case for Embedding Executable Instructions in Markdown}
-\author{Nathaniel J. Houk}
+\title{MarkAI: AI-Assisted Documentation Workflows}
+\author{Nathaniel J. Houk \\ nate@audiokit.ai}
 \date{February 2025}
 
 \begin{document}
 \maketitle
+\tableofcontents
 
 \begin{abstract}
 Traditional documentation is static, non-interactive, and often requires external tools for execution. This paper explores the potential of AI-augmented documentation, specifically MarkAI, a structured execution model that embeds executable AI instructions directly within Markdown documents. We examine how this approach transforms workflows in software development, research, and content creation by making documentation actionable, interactive, and self-updating.
@@ -85,6 +86,24 @@ Using auto-synchronization, MarkAI keeps documentation consistent:
 \begin{lstlisting}
 @ai: /sync auto="true"
 \end{lstlisting}
+
+\section{Security Considerations}
+While embedding executable commands within documentation offers productivity benefits, it also introduces risks such as:
+\begin{itemize}
+    \item \textbf{Unauthorized Code Execution:} Malicious commands embedded in documentation could compromise system security if not sandboxed properly.
+    \item \textbf{Data Leakage:} Embedded executions might inadvertently reveal sensitive data.
+    \item \textbf{Integrity of Documentation:} Ensuring that commands remain consistent with the documented procedures over time.
+\end{itemize}
+Implementing strict execution policies and isolation environments is critical to mitigate these risks.
+
+\section{Performance Benchmarks}
+To evaluate the efficiency of MarkAI compared to traditional Markdown processing, we propose benchmarks focusing on:
+\begin{itemize}
+    \item \textbf{Execution Latency:} Measuring the time delay between embedded command invocation and task completion.
+    \item \textbf{Resource Consumption:} Analyzing computational overhead incurred by embedding execution logic.
+    \item \textbf{Scalability:} Examining performance under varying document sizes and command complexities.
+\end{itemize}
+Preliminary tests suggest that while MarkAI introduces additional overhead compared to simple Markdown rendering, the benefits of automation and real-time updates can outweigh these costs in dynamic environments.
 
 \section{Conclusion}
 AI-Augmented documentation transforms passive text into interactive, executable, and self-maintaining workflows. By embedding AI commands into Markdown, MarkAI eliminates context switching, reduces human error, and ensures that documentation is always up to date. This approach has profound implications for software development, research automation, and AI-driven workflows, ushering in a new era of \textbf{living documentation} that bridges the gap between text and execution.
