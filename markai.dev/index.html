@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MarkAI - Revolutionizing AI Collaboration</title>
+  <title>MarkAI - AI-Powered Markdown Automation</title>
   <link rel="stylesheet" href="css/styles.css">
   <script defer src="js/app.js"></script>
 </head>
@@ -15,6 +15,7 @@
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="docs.html">Docs</a></li>
+        <li><a href="community.html">Community</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="menu-toggle">
@@ -28,34 +29,61 @@
   <main>
     <section class="hero">
       <h1>Welcome to MarkAI</h1>
-      <p>Empowering the future of AI-driven software automation &amp; collaboration.</p>
-      <a href="docs.html" class="btn">Learn More</a>
+      <p>Redefining AI-powered workflows by embedding machine-executable instructions in human-readable Markdown.</p>
+      <a href="docs.html" class="btn">Explore Documentation</a>
     </section>
     
     <section class="features">
       <div class="feature-item">
-        <h3>AI Integration</h3>
-        <p>Advanced AI agents streamline your code and processes.</p>
+        <h3>AI-Driven Automation</h3>
+        <p>Seamlessly integrate AI workflows using structured instructions inside your documents.</p>
       </div>
       <div class="feature-item">
-        <h3>Self-Updating Documentation</h3>
-        <p>Experience dynamic, live documentation that evolves with your code.</p>
+        <h3>Remote Execution</h3>
+        <p>Execute AI commands locally or via secure remote APIs with authentication.</p>
       </div>
       <div class="feature-item">
-        <h3>Seamless Collaboration</h3>
-        <p>Multi-agent collaboration boosts productivity and innovation.</p>
+        <h3>Self-Synchronizing Documents</h3>
+        <p>MarkAI-enhanced files stay updated with automated version control and logging.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Security & Compliance</h3>
+        <p>Enforce execution security with `ring0`, `locked`, and immutable attributes.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Flexible Plugin System</h3>
+        <p>Extend MarkAI with modular plugins, pre-processing, and post-processing hooks.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Human-Readable Markdown</h3>
+        <p>AI instructions coexist with Markdown, ensuring documents remain easy to read.</p>
       </div>
     </section>
     
+    <section class="how-it-works">
+      <h2>How MarkAI Works</h2>
+      <p>Define, invoke, and execute AI-driven instructions with simple markup.</p>
+      <pre>
+@ai: /sync
+@ai:def /deploy lock="true"
+{
+  "method": "git push",
+  "auto": true
+}
+@ai:end
+      </pre>
+      <p>MarkAI transforms documents into AI-powered automation scripts, maintaining full Markdown compatibility.</p>
+    </section>
+
     <section class="call-to-action">
-      <h2>Join the Revolution</h2>
-      <p>Be part of the AI-native revolution. Discover how MarkAI is redefining the future.</p>
-      <a href="contact.html" class="btn">Get in Touch</a>
+      <h2>Join the AI-First Revolution</h2>
+      <p>Be part of the next evolution of AI-native automation. Start using MarkAI today.</p>
+      <a href="community.html" class="btn">Get Involved</a>
     </section>
   </main>
   
   <footer>
-    <p>&copy; 2025 MarkAI. All rights reserved.</p>
+    <p>&copy; 2025 MarkAI. Open-source under the MIT License.</p>
   </footer>
 </body>
-</html> 
+</html>
