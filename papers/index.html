@@ -54,8 +54,11 @@
     /* Prevent the leftmost table column from stretching on wide screens */
     table th:first-child, table td:first-child {
       white-space: normal;
-      width: 1%;
-      max-width: 300px;
+    }
+    
+    /* Make all columns equal width */
+    table th, table td {
+      width: calc(100% / 8); /* 8 columns total */
     }
     
     .contact-info {
