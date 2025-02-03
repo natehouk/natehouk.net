@@ -1200,4 +1200,6 @@ Houk, N. J. (2025). \emph{Timeproof: A Protocol for Probabilistic Verification v
 \bibitem{Deutsch1985}
 Deutsch, D. (1985). \emph{Quantum theory, the Church-Turing principle and the universal quantum computer.}
 
-\end{thebibliography} 
+\end{thebibliography}
+
+\end{document} 
