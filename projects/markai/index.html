@@ -128,6 +128,37 @@
         <a href="https://github.com/natehouk/markai" class="btn">Discover MarkAI</a>
     </main>
     
+    <!-- New Markdown Section -->
+    <section id="markdown-section" style="margin: 40px auto; max-width:800px;">
+        <h2>Markdown Content</h2>
+        <div id="markdown-container" class="code-block"></div>
+    </section>
+    
+    <!-- Hidden Markdown Template -->
+    <script type="text/template" id="markdown-template">
+# Welcome to MarkAI
+
+MarkAI is **the future** of AI-driven automation.
+
+- A revolutionary **AI guestbook**
+- Fully integrated digital governance
+- Futuristic AI integrations
+
+Enjoy exploring the potential of an AI-native future!
+    </script>
+    
+    <!-- Import Marked library from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- Inline script to convert Markdown to HTML -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var markdownTemplate = document.getElementById('markdown-template').innerText;
+            var htmlContent = marked.parse(markdownTemplate);
+            document.getElementById('markdown-container').innerHTML = htmlContent;
+        });
+    </script>
+    
     <footer>
         <p>&copy; 2025 Nathaniel J. Houk | Welcome to the AI-Native Future</p>
         @ai: /log_activity { "event": "page_rendered", "timestamp": "now" }
