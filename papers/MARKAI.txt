@@ -27,7 +27,7 @@ Traditional documentation is static, non-interactive, and often requires externa
 \section{Introduction}
 Documentation plays a critical role in software development, research, and content creation. However, traditional documentation is often passive and lacks interactivity, leading to inefficiencies such as:
 \begin{itemize}
-    \item Version drift between documentation and the actual system.
+    \item Version drift between documentation and the actual system \cite{placeholder}.
     \item Human errors caused by manual execution of instructions.
     \item Context switching between reading documentation and performing tasks.
 \end{itemize}
@@ -116,7 +116,7 @@ Preliminary tests suggest that while MarkAI introduces additional overhead compa
 \section{Conclusion}
 AI-Augmented documentation transforms passive text into interactive, executable, and self-maintaining workflows. By embedding AI commands into Markdown, MarkAI eliminates context switching, reduces human error, and ensures that documentation is always up to date. This approach has profound implications for software development, research automation, and AI-driven workflows, ushering in a new era of \textbf{living documentation} that bridges the gap between text and execution.
 
-\bibliographystyle{plain}
-\bibliography{references}
+% \bibliographystyle{plain}
+% \bibliography{references}
 
 \end{document}
