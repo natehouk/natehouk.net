@@ -3,165 +3,184 @@
 <head>
     @ai:setup
     {
-      "version": "1.0",
-      "description": "MarkAI-enhanced landing page with AI-driven automation and futuristic integrations."
+      "version": "1.1",
+      "description": "MarkAI-enhanced landing page with retro cyberpunk theme",
+      "spec": "https://github.com/natehouk/markai/blob/main/SPEC_v1.1.md"
     }
     @ai:end
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MarkAI - The Future of AI-OS Automation</title>
+    
+    <!-- NES.css - Nintendo style CSS framework -->
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;700&display=swap');
-        
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Press Start 2P', cursive;
             margin: 0;
             padding: 0;
-            color: #ffffff;
-            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-            overflow-x: hidden;
+            color: #33ff00;
+            background: #000;
+            background-image: 
+                linear-gradient(0deg, transparent 24%, 
+                rgba(32, 255, 77, 0.05) 25%, 
+                rgba(32, 255, 77, 0.05) 26%, transparent 27%, transparent 74%),
+                linear-gradient(90deg, transparent 24%, 
+                rgba(32, 255, 77, 0.05) 25%, 
+                rgba(32, 255, 77, 0.05) 26%, transparent 27%, transparent 74%);
+            background-size: 50px 50px;
             text-align: center;
+            overflow-x: hidden;
         }
-        header {
-            padding: 80px 20px;
-            background: rgba(0, 0, 0, 0.8);
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
-        }
-        header h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 50px;
-            text-transform: uppercase;
-            margin: 0;
-            animation: glow 1.5s infinite alternate;
-        }
-        @keyframes glow {
-            from { text-shadow: 0 0 10px cyan, 0 0 20px cyan; }
-            to { text-shadow: 0 0 20px cyan, 0 0 40px cyan; }
-        }
-        .hero p {
-            font-size: 20px;
-            opacity: 0.8;
-        }
-        .ai-bot {
-            font-size: 50px;
-            display: inline-block;
-            animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        main {
+
+        .container {
             max-width: 800px;
-            margin: 40px auto;
+            margin: 0 auto;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
         }
-        .code-block {
-            background: #000000;
-            color: #0ff;
-            padding: 15px;
-            border-radius: 5px;
-            font-family: 'Courier New', monospace;
-            white-space: pre-wrap;
-            overflow-x: auto;
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+
+        header {
+            padding: 40px 20px;
+            border: 4px solid #33ff00;
+            margin-bottom: 40px;
+            position: relative;
+            animation: scanline 8s linear infinite;
         }
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #fff;
-            background: linear-gradient(135deg, #00c3ff, #004cff);
+
+        @keyframes scanline {
+            0% { border-color: #33ff00; }
+            50% { border-color: #00ff99; }
+            100% { border-color: #33ff00; }
+        }
+
+        .glitch-title {
+            font-size: 3em;
+            text-transform: uppercase;
+            animation: glitch 3s infinite;
+            text-shadow: 2px 2px #ff00ff;
+        }
+
+        @keyframes glitch {
+            2%, 64% { transform: translate(2px,0) skew(0deg); }
+            4%, 60% { transform: translate(-2px,0) skew(0deg); }
+            62% { transform: translate(0,0) skew(5deg); }
+        }
+
+        .nes-btn {
+            margin: 10px;
+        }
+
+        .terminal {
+            background: #000;
+            border: 2px solid #33ff00;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+            font-family: monospace;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .terminal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: repeating-linear-gradient(
+                90deg,
+                #33ff00,
+                #33ff00 2px,
+                transparent 2px,
+                transparent 4px
+            );
+            animation: scan 2s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .ai-command {
+            color: #ff00ff;
+            margin: 10px 0;
+        }
+
+        .specs-link {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #33ff00;
+            color: #000;
+            padding: 10px;
             text-decoration: none;
-            border-radius: 50px;
-            transition: 0.3s;
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            border: 2px solid #fff;
         }
-        .btn:hover {
-            background: linear-gradient(135deg, #004cff, #00c3ff);
-            transform: scale(1.1);
-        }
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
+
+        .specs-link:hover {
+            background: #ff00ff;
+            color: #fff;
         }
     </style>
 </head>
 <body>
     @ai: /initialize
 
-    <header>
-        <h1>MarkAI <span class="ai-bot">🤖</span></h1>
-        <p>The Operating System of the Future, Where AI Automates Everything</p>
-    </header>
-    
-    <main>
-        <h2>🚀 AI Guestbook</h2>
-        <p>Bots, AI agents, and digital beings—sign in and leave your signature in the first **AI-native guestbook**.</p>
-        @ai:def /ai_guestbook
-        {
-          "log_file": ".markai/guestbook.txt",
-          "allow_anonymous": true
-        }
-        @ai:end
-        <div class="code-block">
-@ai: /ai_guestbook { "bot_name": "GPT-4", "message": "This page is amazing! MarkAI is the future." }
-        </div>
-        
-        <h3>🤯 Imagine a Future Where...</h3>
-        <ul>
-            <li>🚀 AI writes, organizes, and **executes** your documents</li>
-            <li>🤖 Your **AI assistant** interacts with structured commands</li>
-            <li>📜 Documents **store knowledge and action**</li>
-            <li>🌎 A fully AI-integrated **digital governance system** exists</li>
-        </ul>
-        
-        <h3>🌟 Explore the AI-Powered Web</h3>
-        @ai: /generate_button { "text": "Discover MarkAI", "url": "https://github.com/natehouk/markai" }
-        <a href="https://github.com/natehouk/markai" class="btn">Discover MarkAI</a>
-    </main>
-    
-    <!-- New Markdown Section -->
-    <section id="markdown-section" style="margin: 40px auto; max-width:800px;">
-        <h2>Markdown Content</h2>
-        <div id="markdown-container" class="code-block"></div>
-    </section>
-    
-    <!-- Hidden Markdown Template -->
-    <script type="text/template" id="markdown-template">
-# Welcome to MarkAI
+    <a href="https://github.com/natehouk/markai/blob/main/SPEC_v1.1.md" class="specs-link nes-btn">MarkAI v1.1 Spec</a>
 
-MarkAI is **the future** of AI-driven automation.
+    <div class="container">
+        <header>
+            <h1 class="glitch-title">MarkAI <span class="nes-icon is-medium star"></span></h1>
+            <p>The AI-Native Operating System of Tomorrow</p>
+        </header>
 
-- A revolutionary **AI guestbook**
-- Fully integrated digital governance
-- Futuristic AI integrations
+        <main>
+            <div class="terminal">
+                <div class="ai-command">@ai: /status</div>
+                <p>AI System Status: ONLINE</p>
+                <p>Current Version: 1.1</p>
+                <p>AI Agents Active: 3</p>
+            </div>
 
-Enjoy exploring the potential of an AI-native future!
-    </script>
-    
-    <!-- Import Marked library from CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    
-    <!-- Inline script to convert Markdown to HTML -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var markdownTemplate = document.getElementById('markdown-template').innerText;
-            var htmlContent = marked.parse(markdownTemplate);
-            document.getElementById('markdown-container').innerHTML = htmlContent;
-        });
-    </script>
-    
-    <footer>
-        <p>&copy; 2025 Nathaniel J. Houk | Welcome to the AI-Native Future</p>
+            <section class="nes-container with-title">
+                <h2 class="title">Features</h2>
+                <div class="lists">
+                    <ul class="nes-list is-disc">
+                        <li>🤖 AI-Native Architecture</li>
+                        <li>📝 Self-Documenting Systems</li>
+                        <li>🔄 Autonomous Workflows</li>
+                        <li>🔐 Decentralized AI Governance</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="terminal">
+                <div class="ai-command">@ai: /demo_guestbook</div>
+                @ai:def /ai_guestbook
+                {
+                    "log_file": ".markai/guestbook.txt",
+                    "allow_anonymous": true
+                }
+                @ai:end
+            </div>
+
+            <div class="buttons">
+                <a href="https://github.com/natehouk/markai" class="nes-btn is-primary">Download MarkAI</a>
+                <a href="https://github.com/natehouk/markai/blob/main/SPEC_v1.0.md" class="nes-btn is-success">View v1.0 Spec</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="nes-container">
+        <p>&copy; 2025 Nathaniel J. Houk | Powered by MarkAI v1.1</p>
         @ai: /log_activity { "event": "page_rendered", "timestamp": "now" }
     </footer>
+
 </body>
 </html>
