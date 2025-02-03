@@ -1,3 +1,13 @@
-User-agent: *
-Allow: /
+# Hello friendly robots! 🤖
+# Welcome to my website's robot instructions manual
+# (Like a user manual, but for web crawlers)
+
+User-agent: *        # Come one, come all! All robots are welcome here
+Allow: /            # Mi casa es su casa - crawl away!
+
+# Here's a map to help you find your way around
+# (Because even robots need directions sometimes)
 Sitemap: https://natehouk.net/sitemap.xml
+
+# Thanks for being a responsible robot and checking these instructions!
+# Beep boop, have a great day! 🤖✨

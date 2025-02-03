@@ -32,12 +32,11 @@ Technologies Used
 File Structure
 --------------
 - index.html: Main website page
-- stylesheet.css: Main stylesheet
-- assets/js/: Contains JavaScript files for Tetris game
-- assets/css/: Contains CSS files including Tetris styles
+- assets/
+  * js/: JavaScript files for Tetris game and other functionality
+  * css/: Stylesheets including Tetris styles
 - images/: Contains profile photos and project images
 - data/: Contains PDFs and text files
-- assets/: Contains additional CSS and JavaScript files
 
 How to Run
 ----------

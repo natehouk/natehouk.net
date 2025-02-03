@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Comprehensive sitemap for all published files in the repository -->
+<!-- The master plan for web crawlers to explore my digital kingdom 👑 -->
 <urlset 
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
@@ -7,7 +7,7 @@
     xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
     xmlns:ai="http://example.com/ai-metadata">
 
-  <!-- Root and configuration files -->
+  <!-- The VIP section - where the magic begins ✨ -->
   <url>
     <loc>https://natehouk.net/</loc>
     <lastmod>2025-01-01</lastmod>
@@ -16,6 +16,7 @@
     <ai:metadata>homepage</ai:metadata>
   </url>
   
+  <!-- The AI whisperer - teaching robots how to behave 🤖 -->
   <url>
     <loc>https://natehouk.net/ai.txt</loc>
     <lastmod>2025-01-01</lastmod>
@@ -24,6 +25,7 @@
     <ai:metadata>AI configuration file</ai:metadata>
   </url>
   
+  <!-- Rules of engagement for our robot friends 🚦 -->
   <url>
     <loc>https://natehouk.net/robots.txt</loc>
     <lastmod>2025-01-01</lastmod>
@@ -32,6 +34,7 @@
     <ai:metadata>robots instructions</ai:metadata>
   </url>
   
+  <!-- A friendly note to our fellow humans 👋 -->
   <url>
     <loc>https://natehouk.net/humans.txt</loc>
     <lastmod>2025-01-01</lastmod>
@@ -40,6 +43,7 @@
     <ai:metadata>humans info file</ai:metadata>
   </url>
   
+  <!-- The manual nobody reads but should 📚 -->
   <url>
     <loc>https://natehouk.net/README.txt</loc>
     <lastmod>2025-01-01</lastmod>
@@ -48,7 +52,7 @@
     <ai:metadata>repository readme</ai:metadata>
   </url>
 
-  <!-- Projects -->
+  <!-- Where the cool stuff lives 🚀 -->
   <url>
     <loc>https://natehouk.net/projects/markai/index.html</loc>
     <lastmod>2025-02-01</lastmod>
@@ -57,7 +61,7 @@
     <ai:metadata>MarkAI project landing page</ai:metadata>
   </url>
   
-  <!-- Papers -->
+  <!-- The brain dump section - where ideas go to shine 💡 -->
   <url>
     <loc>https://natehouk.net/papers/index.html</loc>
     <lastmod>2025-01-15</lastmod>
@@ -66,6 +70,7 @@
     <ai:metadata>Papers index page</ai:metadata>
   </url>
 
+  <!-- SEO is dead, long live AIMO! 👻 -->
   <url>
     <loc>https://natehouk.net/papers/AIMO.txt</loc>
     <lastmod>2025-06-01</lastmod>
@@ -74,6 +79,7 @@
     <ai:metadata>Paper: The Death of SEO and the Rise of AI Model Optimization (Text)</ai:metadata>
   </url>
   
+  <!-- The same paper, but with fancy LaTeX formatting ✨ -->
   <url>
     <loc>https://natehouk.net/papers/AIMO.tex</loc>
     <lastmod>2025-06-01</lastmod>
@@ -82,6 +88,7 @@
     <ai:metadata>Paper: The Death of SEO and the Rise of AI Model Optimization (LaTeX)</ai:metadata>
   </url>
   
+  <!-- Making documentation fun again (yes, really!) 📝 -->
   <url>
     <loc>https://natehouk.net/papers/MARKAI.txt</loc>
     <lastmod>2025-02-01</lastmod>
@@ -90,6 +97,7 @@
     <ai:metadata>Paper: MarkAI – AI-Assisted Documentation Workflows (Text)</ai:metadata>
   </url>
   
+  <!-- The LaTeX version, for the typography nerds 🤓 -->
   <url>
     <loc>https://natehouk.net/papers/MARKAI.tex</loc>
     <lastmod>2025-02-01</lastmod>
@@ -98,6 +106,7 @@
     <ai:metadata>Paper: MarkAI – AI-Assisted Documentation Workflows (LaTeX)</ai:metadata>
   </url>
   
+  <!-- The cool new kid on the block - MarkAI format 🌟 -->
   <url>
     <loc>https://natehouk.net/papers/MARKDOWN.ma</loc>
     <lastmod>2025-02-10</lastmod>
@@ -106,6 +115,7 @@
     <ai:metadata>Paper: MarkAI – Markdown Version</ai:metadata>
   </url>
   
+  <!-- Darwin would be proud of this one 🧬 -->
   <url>
     <loc>https://natehouk.net/papers/EVOLVING.txt</loc>
     <lastmod>2025-05-01</lastmod>
@@ -114,6 +124,7 @@
     <ai:metadata>Paper: Self-Evolving Workflows (Text)</ai:metadata>
   </url>
   
+  <!-- Same evolution, different format 🦋 -->
   <url>
     <loc>https://natehouk.net/papers/EVOLVING.tex</loc>
     <lastmod>2025-05-01</lastmod>
@@ -122,6 +133,7 @@
     <ai:metadata>Paper: Self-Evolving Workflows (LaTeX)</ai:metadata>
   </url>
   
+  <!-- The future of operating systems, no big deal 💫 -->
   <url>
     <loc>https://natehouk.net/papers/AI-OS.txt</loc>
     <lastmod>2025-04-01</lastmod>
@@ -130,6 +142,7 @@
     <ai:metadata>Paper: AI-Native Operating Systems (Text)</ai:metadata>
   </url>
   
+  <!-- LaTeX: because presentations matter 📊 -->
   <url>
     <loc>https://natehouk.net/papers/AI-OS.tex</loc>
     <lastmod>2025-04-01</lastmod>
@@ -138,6 +151,7 @@
     <ai:metadata>Paper: AI-Native Operating Systems (LaTeX)</ai:metadata>
   </url>
   
+  <!-- Time travel protocol (DeLorean not included) ⏰ -->
   <url>
     <loc>https://natehouk.net/papers/TEMPORAL.txt</loc>
     <lastmod>2025-07-01</lastmod>
@@ -145,17 +159,8 @@
     <priority>0.8</priority>
     <ai:metadata>Paper: Temporal Protocol (Text)</ai:metadata>
   </url>
-
-  <!-- Assets -->
-  <url>
-    <loc>https://natehouk.net/assets/css/style.css.map</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-    <ai:metadata>CSS source map</ai:metadata>
-  </url>
   
-  <!-- Data Files -->
+  <!-- The story of a legend in the making 🌟 -->
   <url>
     <loc>https://natehouk.net/data/NathanielHouk-bio.txt</loc>
     <lastmod>2025-01-01</lastmod>
