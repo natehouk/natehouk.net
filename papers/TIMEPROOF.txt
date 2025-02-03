@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\title{TimeProof: A Protocol for Probabilistic Verification}
+\author{Nathaniel J. Houk \\ nate@audiokit.ai}
+\date{February 2025}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\begin{itemize}
+    \item[Cryptographic Escrow] A mechanism where funds or information are held in a secure, verifiable state until certain conditions are met.
+    \item[Elliptic Curve Discrete Logarithm Problem (ECDLP)] The mathematical problem that forms the basis of elliptic curve cryptography, believed to be computationally hard to solve.
+    \item[Non-Homogeneous Poisson Process] A statistical model used to describe events that occur randomly over time, where the rate of occurrence can vary.
+    \item[OpenTimestamps] A protocol for creating blockchain-based timestamp proofs that can be independently verified.
+    \item[Preimage Resistance] A property of cryptographic hash functions where it's computationally infeasible to find an input that hashes to a specific output.
+    \item[Proof of Existence] A cryptographic service that verifies the existence of a document at a specific point in time.
+    \item[Rainbow Table Attack] A type of cryptographic attack that uses precomputed tables of hash values to reverse cryptographic hash functions.
+    \item[Salt \( S \)] A random value used to ensure the uniqueness of the Bitcoin address \( A \).
+\end{itemize}
+
+\section{Formal Analysis of the TimeProof Function}
+In this section we derive the verification function used in the protocol. Assuming proof revelation follows a Poisson process, the probability that no proof is submitted by time \(\Delta t\) is 
+\[
+e^{-\lambda \Delta t}.
+\]
+Thus, the probability that a valid proof is submitted (i.e. verified) by time \(\Delta t\) is:
+\[
+V(\Delta t) = 1 - e^{-\lambda \Delta t}.
+\]
+
+\subsection{Game-Theoretic Implications and Strategic Withholding Risks}
+The TimeProof protocol employs economic incentives to motivate prompt proof submission. Let \(R_0\) be the maximum reward available. A delaying participant incurs a decay in the reward modeled by
+\[
+R(\Delta t) = R_0 \cdot e^{-\gamma \Delta t},
+\]
+where \(\gamma\) is the decay constant. This incentive structure is designed so that the Nash equilibrium is achieved when all rational participants submit their proofs promptly, thereby mitigating risks associated with strategic withholding.
+
+\section{Conclusion}
+This section has provided the formal analytical foundation for the TimeProof function and highlighted its game-theoretic underpinnings. Future work will include empirical evaluation and simulation of the protocol.
+
+\begin{thebibliography}{9}
+% Add entries as needed; for example, if citations are added later.
+\end{thebibliography}
+
+\end{document}
