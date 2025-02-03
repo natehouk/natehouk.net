@@ -6,37 +6,39 @@ The site showcases his professional background, projects, and interests.
 
 About
 -----
-Nathaniel Houk is an Italian-American computer engineer, derivatives trader, 
-entrepreneur, and music enthusiast based in Amsterdam, Netherlands. His 
-interests span computers, programming, machine learning, options trading, 
-vintage electronics, eurorack modular synthesizers, techno music, and traveling.
+Nathaniel Houk is a software engineer and quantitative trader based in Amsterdam, Netherlands. 
+His expertise spans software engineering, algorithmic trading, machine learning, and 
+distributed systems. Outside of tech, he's passionate about electronic music production, 
+modular synthesis, and exploring new technologies.
 
 Key Features
 ------------
-- Professional background and achievements
-- Project showcase including:
-  * iSnooze alarm clock (EE459 senior design project)
-  * USC Programming Contest solutions
-  * Snake and Mastermind games
-- Research papers on blockchain and timekeeping
+- Professional portfolio and experience
+- Technical projects including:
+  * Trading algorithms and market analysis tools
+  * Full-stack web applications
+  * Open-source contributions
+- Technical blog posts and research
+- Interactive demos and visualizations
 - Tetris game (press 'T' to play)
-- Travel map visualization
 
 Technologies Used
 -----------------
-- HTML5
-- CSS (including custom styles and Blockrain CSS for Tetris)
-- JavaScript (jQuery and Blockrain.js for Tetris)
-- LaTeX for research papers
+- Frontend: HTML5, CSS3, JavaScript/TypeScript, React
+- Backend: Node.js, Python, Go
+- Infrastructure: AWS, Docker, Kubernetes
+- Data: PostgreSQL, Redis, TimescaleDB
+- Trading: Custom algorithmic trading frameworks
 
 File Structure
 --------------
-- index.html: Main website page
+- index.html: Main portfolio page
 - assets/
-  * js/: JavaScript files for Tetris game and other functionality
-  * css/: Stylesheets including Tetris styles
-- images/: Contains profile photos and project images
-- data/: Contains PDFs and text files
+  * js/: JavaScript files and interactive components
+  * css/: Stylesheets and theming
+- blog/: Technical writing and research
+- projects/: Project documentation and demos
+- data/: Datasets and resources
 
 How to Run
 ----------
