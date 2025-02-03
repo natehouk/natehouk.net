@@ -31,19 +31,19 @@ We introduce a formal framework for analyzing computational oracle dominance and
 
 \section{Introduction}
 
-Traditional mathematical proofs rely on deductive reasoning and constructive arguments. However, certain mathematical statements may be true yet practically unverifiable within conventional proof systems due to computational constraints. The Mathematical Assertion Delay (MAD) Paradox provides a framework for understanding how truth can emerge through temporal persistence, particularly in computationally bounded environments.
+Traditional mathematical proofs rely on deductive reasoning and constructive arguments \cite{Cook1971, Godel1931}. However, certain mathematical statements may be true yet practically unverifiable within conventional proof systems due to computational constraints. The Mathematical Assertion Delay (MAD) Paradox provides a framework for understanding how truth can emerge through temporal persistence, particularly in computationally bounded environments.
 
 \subsection{Motivation}
 
-Consider the statement ``$P \neq NP$.'' Despite decades of effort, no proof has been found for either $P = NP$ or $P \neq NP$. The MAD Paradox suggests that the persistence of this open question, combined with the collective failure to find a polynomial-time algorithm for NP-complete problems, provides probabilistic evidence for $P \neq NP$ that strengthens over time.
+Consider the statement ``$P \neq NP$.'' Despite decades of effort, no proof has been found for either $P = NP$ or $P \neq NP$ \cite{Cook1971}. The MAD Paradox suggests that the persistence of this open question, combined with the collective failure to find a polynomial-time algorithm for NP-complete problems, provides probabilistic evidence for $P \neq NP$ that strengthens over time.
 
 \subsection{Contributions}
 
 This paper makes the following contributions:
 \begin{enumerate}[label=(\arabic*)]
     \item A formal definition of the MAD Paradox and its mathematical properties.
-    \item A probabilistic framework for truth verification through temporal persistence.
-    \item A blockchain-based implementation for empirical validation.
+    \item A probabilistic framework for truth verification through temporal persistence \cite{BenSasson2018}.
+    \item A blockchain-based implementation for empirical validation \cite{Buterin2014}.
     \item Applications to open problems in complexity theory.
 \end{enumerate}
 
