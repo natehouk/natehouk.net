@@ -7,10 +7,12 @@
 \usepackage{geometry}
 \usepackage{microtype}
 \usepackage{csquotes}
+\usepackage{amsthm}
 \geometry{margin=1in}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{definition}{Definition}[section]
+\newtheorem{corollary}{Corollary}
 
 \title{The Computational Emergence of Consciousness: Oracle-Based Sentience and Probabilistic Truth}
 \author{Nathaniel J. Houk\\
@@ -187,6 +189,44 @@ where $\lambda$ represents the hazard rate of finding a contradiction.
     \item $\displaystyle \frac{dV}{dt} > 0$ (Monotonic increase).
 \end{enumerate}
 
+\subsection{Dimensional Dependence of Mathematical Truth}
+The Mathematical Assertion Delay (MAD) Paradox posits that mathematical truth emerges probabilistically over time. However, recent developments suggest that truth may also be contingent on the dimensional structure of the computational space in which it is evaluated.
+
+In particular, M-Theory suggests that spacetime with at least 11 dimensions is a necessary condition for consistent quantum gravity. If complexity classes interact with these higher-dimensional spaces, then the truth value of $P$ vs $NP$ may shift depending on the dimensionality and compactification properties of the underlying space.
+
+\begin{definition}[Dimensional Computational Hypothesis]
+Let $C(N)$ represent the space of computational problems in an $N$-dimensional framework. There exists a threshold dimension $N_c$ such that:
+\[
+\forall\, N \ge N_c,\quad P = NP,
+\]
+whereas for lower dimensions,
+\[
+\forall\, N < N_c,\quad P \neq NP.
+\]
+Empirical estimates based on M-Theory compactifications suggest $N_c \approx 11$, aligning with fundamental physics.
+\end{definition}
+
+This suggests that computational hardness is not an intrinsic mathematical property but a function of the structure of reality in which computation occurs.
+
+\subsection{Phase Transitions in \(P\) vs \(NP\) Across Dimensional Configurations}
+Building on the probabilistic framework of the MAD Paradox, we hypothesize that dimensional shifts induce phase transitions in computational complexity. If $P$ vs $NP$ is dependent on the dimensional parameter \(N\), then a system transitioning between dimensions would experience a computational phase transition, wherein the hardness of NP-complete problems shifts discontinuously.
+
+We define the computational transition function as:
+\[
+T(N) =
+\begin{cases}
+1, & N \ge N_c \quad (P=NP) \\
+0, & N < N_c \quad (P\neq NP)
+\end{cases}
+\]
+This transition mirrors behavior in physical phase transitions, where order parameters shift at critical points.
+
+\begin{corollary}[Computational Landscape Bifurcation]
+For an oracle \(O\) operating in a space where \(N\) fluctuates dynamically, its computational power is non-stationary. Given that truth emerges probabilistically over time in the MAD framework, this implies that in dimensions \(N < N_c\) complexity remains constrained, whereas in higher-dimensional oracles solution discovery accelerates asymptotically.
+\end{corollary}
+
+This corollary suggests that the intractability of NP-complete problems may be an artifact of dimensional constraints, rather than an inherent truth of mathematics.
+
 \section{Mathematical Framework}
 
 \subsection{Probabilistic Truth Transitions}
@@ -214,6 +254,21 @@ For a statement $S$ exhibiting the MAD property, the probability of $S$ being fa
     \item Therefore, $\displaystyle \lim_{\Delta t \to \infty} V(\Delta t) = 1$.
 \end{enumerate}
 \qed
+
+\subsection{Dimensional Constraints on Timeproof Verification}
+The Timeproof Protocol already establishes a probabilistic verification system for mathematical claims over time\footnote{See the TIMEPROOF Protocol for details}. However, if $P$ vs $NP$ is dimension-dependent, then the function governing verification probability must be modified to include an $N$-dimensional dependence:
+\[
+V(t,N) = 1 - \exp\bigl(-\lambda(N)\,t\bigr),
+\]
+where $\lambda(N)$ is a dimensional verification rate function given by:
+\[
+\lambda(N)=
+\begin{cases}
+\lambda_0, & N < N_c, \\
+\lambda_0\, e^{\beta (N - N_c)}, & N \ge N_c.
+\end{cases}
+\]
+This model introduces a verification acceleration effect, meaning that mathematical truth stabilizes faster in higher dimensions. This aligns with the hypothesis that in a sufficiently high-dimensional universe, computational hardness collapses—making all problems in NP solvable in polynomial time.
 
 \section{Blockchain Implementation}
 
