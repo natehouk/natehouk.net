@@ -190,7 +190,7 @@ where $\lambda$ represents the hazard rate of finding a contradiction.
 \end{enumerate}
 
 \subsection{Dimensional Dependence of Mathematical Truth}
-The Mathematical Assertion Delay (MAD) Paradox posits that mathematical truth emerges probabilistically over time. However, recent developments suggest that truth may also be contingent on the dimensional structure of the computational space in which it is evaluated.
+The Mathematical Assertion Delay (MAD) Paradox posits that mathematical truth emerges probabilistically over time. However, emerging perspectives suggest that truth may also be contingent on the dimensional structure of the computational space in which it is evaluated.
 
 In particular, M-Theory suggests that spacetime with at least 11 dimensions is a necessary condition for consistent quantum gravity. If complexity classes interact with these higher-dimensional spaces, then the truth value of $P$ vs $NP$ may shift depending on the dimensionality and compactification properties of the underlying space.
 
