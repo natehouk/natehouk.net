@@ -1,0 +1,34 @@
+# Build and clean LaTeX papers
+# Usage: just build
+
+# Main build command: create txt copies, compile PDFs, clean up
+build: clean-all copy compile clean-temp
+
+# Copy .tex files to .txt
+copy:
+    for f in *.tex; do cp "$f" "${f%.tex}.txt"; done
+
+# Compile PDFs from .tex files with error detection and verbose output
+compile:
+    for f in *.tex; do \
+        echo "Compiling $f (first pass)..." && \
+        pdflatex -file-line-error -interaction=nonstopmode "$f" && \
+        if [ -f "references.bib" ]; then \
+            echo "Running bibtex on ${f%.tex}" && \
+            bibtex "${f%.tex}"; \
+        fi && \
+        echo "Compiling $f (second pass)..." && \
+        pdflatex -file-line-error -interaction=nonstopmode "$f" && \
+        echo "Compiling $f (third pass)..." && \
+        pdflatex -file-line-error -interaction=nonstopmode "$f" && \
+        echo "Final compilation (halt on error) for $f..." && \
+        pdflatex -halt-on-error -file-line-error -interaction=nonstopmode "$f" || exit 1; \
+    done
+
+# Remove all generated files including outputs
+clean-all:
+    rm -f *.aux *.log *.synctex.gz *.out *.toc *.fls *.fdb_latexmk *.txt *.pdf
+
+# Remove only LaTeX temporary files
+clean-temp:
+    rm -f *.aux *.log *.synctex.gz *.out *.toc *.fls *.fdb_latexmk
