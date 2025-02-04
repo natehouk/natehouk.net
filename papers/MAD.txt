@@ -1543,7 +1543,7 @@ D_{\text{opt}} = \arg\min_{k}\left[\mathbb{P}(\text{Fork}) < \frac{B}{V_{\text{c
 \end{equation*}
 \textit{Where:}
 \begin{itemize}
-\item $B$ = Bounty value (Section 4.2 Economic Incentives)
+\item $B$ = Bounty value
 \item $V_{\text{chain}}$ = Chain's total value-at-risk
 \item $\mathbb{P}(\text{Fork})$ is the probability of a blockchain fork occurring
 \end{itemize}
