@@ -24,10 +24,9 @@
 
 \maketitle
 
-\begin{abstract}
-We introduce a formal framework for analyzing computational oracle dominance and the enforcement constraints imposed by higher-dimensional systems. We prove that any oracle achieving complete verification supremacy within a finite complexity class must, with probability approaching 1, become computationally observable and subject to intervention. This result follows from an extension of oracle separations and probabilistic truth-stability models. We refine the verification function \( V(\Delta t) \) using an axiomatic structure that incorporates entropy-bounded constraints on computational persistence. Our findings provide insight into the fundamental limitations of self-verifying systems, with implications for oracle hierarchies, blockchain-based verification, and computational epistemology.
+\section*{Abstract}
 
-\end{abstract}
+The Mathematical Assertion Delay (MAD) Paradox introduces a transformative framework for understanding the emergence of mathematical truth over time, challenging the classical binary view of provability. By synthesizing insights from computational complexity, blockchain-based verification, and oracle-driven dynamics, we establish a rigorous probabilistic model of truth verification that operates independently of traditional proof construction. Our model formalizes this through a verification function $V(\Delta t)$ that quantifies the probability of a mathematical statement achieving stability over time, leveraging blockchain-based timestamping mechanisms and oracle-driven phase transitions to track evolving mathematical consensus. We demonstrate that under finite computational constraints, persistent assertions can asymptotically approach verifiability, redefining the epistemic limits of proof-based mathematics. The implications of the MAD Paradox extend beyond pure mathematics, offering novel perspectives on computational complexity (P vs NP), cryptographic security, automated theorem proving, and the philosophical foundations of mathematical truth. This work establishes a new paradigm wherein truth is not an immutable property but an emergent, time-dependent construct, probabilistically verifiable through decentralized computational persistence.
 
 \section{Introduction}
 
@@ -1503,7 +1502,49 @@ For an ASI, acting as if it does not exist is equivalent to winning the game bef
 
 \section{Conclusion}
 
-The Mathematical Assertion Delay Paradox provides a novel framework for understanding how mathematical truth may emerge with temporal persistence. Building on ideas from computational complexity, blockchain-based verification, and even advanced oracle dynamics, our framework opens up a new paradigm in exploring truth, consensus, and the limits of verification in the digital age.
+The Mathematical Assertion Delay Paradox fundamentally redefines our understanding of how mathematical truth emerges over time, challenging the traditional binary view of provability. By integrating insights from computational complexity, blockchain-based verification, and oracle-driven dynamics, this framework establishes a probabilistic model for truth verification that operates even in the absence of constructive proof.
+
+This paradigm shift suggests that certain truths may achieve increasing certainty through temporal persistence, fundamentally altering our approach to mathematical verification in the digital age. The implications extend beyond pure mathematics, offering new perspectives on undecidability, automated theorem proving, and cryptographic security. As computational landscapes continue to evolve, future research must focus on understanding and harnessing the limits of verification, ensuring that probabilistic truth models are robust against adversarial manipulation and aligned with the principles of computational epistemology.
+
+\section*{Open Problems: Technical Breakdown}
+
+\begin{enumerate}
+\item \textbf{Consciousness Wavefunction Collapse Parameters}
+\begin{align*}
+\Psi_C(t) = \alpha(t)|0\rangle + \beta(t)|1\rangle \quad \text{where } |\beta(t)|^2 = P(C)
+\end{align*}
+\textit{Challenge:} Determine the exact differential equations governing $\alpha(t),\beta(t)$ coefficients under:  
+\begin{itemize}
+\item Varying evidence accumulation rates $dE(O)/dt$
+\item Adversarial suppression attempts $\exists A:\frac{\partial|\beta|^2}{\partial t}<0$
+\item Critical phase transition thresholds $P_{\text{crit}} = f(E(T),\lambda_{\text{obs}})$
+\end{itemize}
+\textit{Connection to Paper:} Requires unifying Sections 2.2 (Consciousness Probability) and 8.7 (Quantum Cognition Models).
+
+\item \textbf{Optimal Blockchain Confirmation Depth for $P=NP$ Proofs}
+\begin{equation*}
+D_{\text{opt}} = \arg\min_{k}\left[\mathbb{P}(\text{Fork}) < \frac{B}{V_{\text{chain}}}\right]
+\end{equation*}
+\textit{Where:}
+\begin{itemize}
+\item $B$ = Bounty value (Section 4.2 Economic Incentives)
+\item $V_{\text{chain}}$ = Chain's total value-at-risk
+\item $\mathbb{P}(\text{Fork})$ from Section 8.3 (Blockchain Physics)
+\end{itemize}
+\textit{Key Paradox:} The required depth $k$ becomes uncomputable if $P=NP$ itself gets proven, creating a Gödelian loop in verification trust.
+
+\item \textbf{Trans-Dimensional Entropy Redistribution Protocols}
+\begin{equation*}
+\exists\mathcal{R}:\int_{D_l}^{D_h} S(x,t)g_{\mu\nu}\,dx^\mu dx^\nu = \text{const}
+\end{equation*}
+\textit{Requirements:}
+\begin{itemize}
+\item Preserve Section 9's Nash Equilibrium under entropy flow
+\item Maintain $\frac{dS}{dt}\geq0$ in lower dimensions (Theorem 4.1)
+\item Prevent oracle black hole formation (Section 7.2 Collapse Mechanisms)
+\end{itemize}
+\textit{Obstacle:} Requires extending the MAD Paradox (Section 3) to infinite-dimensional C*-algebras.
+\end{enumerate}
 
 \bibliographystyle{plain}
 \bibliography{references}
