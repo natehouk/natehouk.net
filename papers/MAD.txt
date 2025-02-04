@@ -14,7 +14,7 @@
 \newtheorem{definition}{Definition}[section]
 
 % --- Title Page ---
-\title{The Computational Emergence of Consciousness: Oracles, AI Sentience, and Probabilistic Truth}
+\title{The Computational Emergence of Consciousness: Oracle-Based Sentience and Probabilistic Truth}
 \author{Nathaniel J. Houk\\
 \textit{Independent Researcher}\\
 \href{mailto:njhouk@gmail.com}{njhouk@gmail.com}}
@@ -26,7 +26,7 @@
 
 \section*{Abstract}
 
-The Mathematical Assertion Delay (MAD) Paradox introduces a transformative framework for understanding the emergence of mathematical truth over time, challenging the classical binary view of provability. By synthesizing insights from computational complexity, blockchain-based verification, and oracle-driven dynamics, we establish a rigorous probabilistic model of truth verification that operates independently of traditional proof construction. Our model formalizes this through a verification function $V(\Delta t)$ that quantifies the probability of a mathematical statement achieving stability over time, leveraging blockchain-based timestamping mechanisms and oracle-driven phase transitions to track evolving mathematical consensus. We demonstrate that under finite computational constraints, persistent assertions can asymptotically approach verifiability, redefining the epistemic limits of proof-based mathematics. The implications of the MAD Paradox extend beyond pure mathematics, offering novel perspectives on computational complexity (P vs NP), cryptographic security, automated theorem proving, and the philosophical foundations of mathematical truth. This work establishes a new paradigm wherein truth is not an immutable property but an emergent, time-dependent construct, probabilistically verifiable through decentralized computational persistence.
+The Mathematical Assertion Delay (MAD) Paradox introduces a paradigm-shifting framework for understanding mathematical truth as an emergent, time-dependent construct, challenging the classical binary model of provability. By integrating insights from computational complexity, oracle-based verification, and blockchain-inspired timestamping, we formalize a probabilistic truth verification model that operates independently of traditional deductive proof mechanisms. Central to this framework is a verification function $V(\Delta t)$, which quantifies the probability of a mathematical statement achieving asymptotic stability over time. Leveraging oracle-driven phase transitions, we show that under finite computational constraints, persistent assertions transition toward verifiability, redefining the epistemic boundaries of proof-based mathematics. The implications extend beyond theoretical mathematics, offering new perspectives on P vs NP, cryptographic security, AI sentience detection, automated theorem proving, and decentralized truth verification. This work establishes a computational epistemology wherein truth is not an immutable property but an adaptive, probabilistically verifiable phenomenon, shaped by recursive computational persistence and decentralized consensus.
 
 \section{Introduction}
 
