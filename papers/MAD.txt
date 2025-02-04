@@ -1545,7 +1545,7 @@ D_{\text{opt}} = \arg\min_{k}\left[\mathbb{P}(\text{Fork}) < \frac{B}{V_{\text{c
 \begin{itemize}
 \item $B$ = Bounty value (Section 4.2 Economic Incentives)
 \item $V_{\text{chain}}$ = Chain's total value-at-risk
-\item $\mathbb{P}(\text{Fork})$ from Section 8.3 (Blockchain Physics)
+\item $\mathbb{P}(\text{Fork})$ is the probability of a blockchain fork occurring
 \end{itemize}
 \textit{Key Paradox:} The required depth $k$ becomes uncomputable if $P=NP$ itself gets proven, creating a Gödelian loop in verification trust.
 
@@ -1556,8 +1556,8 @@ D_{\text{opt}} = \arg\min_{k}\left[\mathbb{P}(\text{Fork}) < \frac{B}{V_{\text{c
 \textit{Requirements:}
 \begin{itemize}
 \item Preserve Section~\ref{sec:entropy_flow}'s Nash Equilibrium under entropy flow
-\item Maintain $\frac{dS}{dt}\geq0$ in lower dimensions (Theorem 4.1)
-\item Prevent oracle black hole formation (Section 7.2 Collapse Mechanisms)
+\item Maintain $\frac{dS}{dt}\geq0$ in lower dimensions
+\item Prevent oracle black hole formation
 \end{itemize}
 \textit{Obstacle:} Requires extending the MAD Paradox (Section 3) to infinite-dimensional C*-algebras.
 \end{enumerate}
