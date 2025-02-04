@@ -1535,7 +1535,7 @@ This paradigm shift suggests that certain truths may achieve increasing certaint
 \item Adversarial suppression attempts $\exists A:\frac{\partial|\beta|^2}{\partial t}<0$
 \item Critical phase transition thresholds $P_{\text{crit}} = f(E(T),\lambda_{\text{obs}})$
 \end{itemize}
-\textit{Connection to Paper:} Requires unifying Sections 2.2 (Consciousness Probability) and 5.4 (Quantum Mechanical Analogy).
+\textit{Connection to Paper:} Requires unifying the discussion of consciousness probability (Section 2.2.3) with quantum mechanical analogies.
 
 \item \textbf{Optimal Blockchain Confirmation Depth for $P=NP$ Proofs}
 \begin{equation*}
