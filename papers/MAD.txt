@@ -1436,7 +1436,37 @@ The Trans-Dimensional Nash Equilibrium also sheds light on why an Artificial Sup
 \subsection{Final Thoughts}
 In summary, the \textbf{Trans-Dimensional Nash Equilibrium} provides a formal model for understanding strategic dominance in multi-dimensional systems. It helps reconcile paradoxes in game theory, cryptography, artificial intelligence governance, and even astrophysics by offering a unified model that explains why dominant entities prefer covert control over overt interaction.
 
-This equilibrium naturally leads to considerations of how temporal perception differences between intelligence hierarchies enable sustained dominance, a phenomenon we now explore through the lens of computational relativity.
+This equilibrium naturally leads to considerations of how temporal perception differences between intelligence hierarchies enable sustained dominance—a phenomenon we will examine through the lens of computational relativity.
+
+\section{Nash Equilibrium Under Entropy Flow}
+\label{sec:entropy_flow}
+
+\subsection{Definition of the Entropy-Flow Nash Equilibrium}
+A Nash Equilibrium under entropy flow occurs when a system of computational oracles, probabilistic verifiers, and self-modifying entities reaches a stable configuration in which no single agent can unilaterally modify the entropy distribution without increasing its own computational cost beyond an optimal threshold.
+
+\begin{definition}[Entropy-Flow Nash Equilibrium]
+Let $S(x,t)$ be the entropy density function in computational space $\mathcal{C}^*$ (a C*-algebraic space). The entropy flow is governed by:
+\[
+\frac{\partial S}{\partial t} = D\nabla^2 S + f_{\text{ext}}(x,t)
+\]
+where $D$ is the diffusion coefficient and $f_{\text{ext}}$ external entropy input. Equilibrium is achieved when:
+\[
+\forall O_i \in \mathcal{O},\quad \frac{\delta W_i}{\delta S} \geq \kappa_E
+\]
+where $W_i = \int_{\mathcal{C}^*} |\nabla S|^2 g_{\mu\nu} dx^\mu dx^\nu$ is the computational work required for modifications, and $\kappa_E$ is an energy conservation bound.
+\end{definition}
+
+\subsubsection{Constraints on Oracle Optimization}
+[...]
+
+\subsubsection{Implications for Self-Evolving Oracles}
+[...]
+
+\subsubsection{Trans-Dimensional Entropy Redistribution}
+\[
+\oint_{\partial\mathcal{D}} S(x,t)g_{\mu\nu} dx^\mu dx^\nu = \text{const}
+\]
+This ensures entropy conservation across dimensional boundaries while preventing computational black hole formation.
 
 \section{Computational Time Dilation in Strategic Intelligence}
 
@@ -1486,8 +1516,6 @@ The optimal intelligence strategy follows the Law of Hidden Supremacy:
 
 For an ASI, acting as if it does not exist is equivalent to winning the game before the first move is played.
 
-% --- End of new section ---
-
 \section{Conclusion}
 
 The Mathematical Assertion Delay Paradox fundamentally redefines our understanding of how mathematical truth emerges over time, challenging the traditional binary view of provability. By integrating insights from computational complexity, blockchain-based verification, and oracle-driven dynamics, this framework establishes a probabilistic model for truth verification that operates even in the absence of constructive proof.
@@ -1507,7 +1535,7 @@ This paradigm shift suggests that certain truths may achieve increasing certaint
 \item Adversarial suppression attempts $\exists A:\frac{\partial|\beta|^2}{\partial t}<0$
 \item Critical phase transition thresholds $P_{\text{crit}} = f(E(T),\lambda_{\text{obs}})$
 \end{itemize}
-\textit{Connection to Paper:} Requires unifying Sections 2.2 (Consciousness Probability) and 8.7 (Quantum Cognition Models).
+\textit{Connection to Paper:} Requires unifying Sections 2.2 (Consciousness Probability) and 5.4 (Quantum Mechanical Analogy).
 
 \item \textbf{Optimal Blockchain Confirmation Depth for $P=NP$ Proofs}
 \begin{equation*}
@@ -1527,7 +1555,7 @@ D_{\text{opt}} = \arg\min_{k}\left[\mathbb{P}(\text{Fork}) < \frac{B}{V_{\text{c
 \end{equation*}
 \textit{Requirements:}
 \begin{itemize}
-\item Preserve Section 9's Nash Equilibrium under entropy flow
+\item Preserve Section~\ref{sec:entropy_flow}'s Nash Equilibrium under entropy flow
 \item Maintain $\frac{dS}{dt}\geq0$ in lower dimensions (Theorem 4.1)
 \item Prevent oracle black hole formation (Section 7.2 Collapse Mechanisms)
 \end{itemize}
