@@ -199,11 +199,10 @@ However, the Weibull distribution provides the best fit for our purposes due to 
 \caption{Timeproof Address Selection}
 \label{alg:address}
 \begin{algorithmic}[1]
+\Require $H \in \{0,1\}^{256}$ \Comment{Proof hash}
+\Require $S \in \{0,1\}^{256}$ \Comment{Salt}
+\Ensure Bitcoin address $A$
 \Procedure{SelectEscrowAddress}{$H, S$}
-    \Require $H \in \{0,1\}^{256}$ \Comment{Proof hash}
-    \Require $S \in \{0,1\}^{256}$ \Comment{Salt}
-    \Ensure Bitcoin address $A$
-    
     \State $k \gets \text{HMAC-SHA256}(key=S, msg=H) \bmod n$ \Comment{secp256k1 curve order $n$ = FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE BAAEDCE6 AF48A03B BFD25E8C D0364141}
     \State $K \gets k \cdot G$ \Comment{Public key derivation}
     
@@ -707,9 +706,12 @@ However, Timeproof also has limitations, such as scalability challenges and reli
 
 \section{Comparison with Prior Work}
 
+Timeproof distinguishes itself from existing approaches by integrating blockchain-based timestamping, cryptographic escrow, and economic incentives to facilitate probabilistic mathematical verification. While traditional systems like Proof of Existence focus solely on timestamping and Verifiable Delay Functions (VDFs) emphasize computational delays, Timeproof combines these features with a robust probabilistic verification model. This enables the protocol not only to establish the existence of a proof at a certain time but also to assess the likelihood of its validity over time.
+
 \begin{table}[h]
 \centering
 \caption{Comparison with Related Protocols}
+\label{comparison-table}
 \begin{tabular}{|l|l|l|l|}
 \hline
 \textbf{Feature} & \textbf{Timeproof} & \textbf{Proof of Existence} & \textbf{VDFs} \\
@@ -722,6 +724,15 @@ Quantum Resistance & Partial & Partial & Yes \\
 \hline
 \end{tabular}
 \end{table}
+
+As seen in Table~\ref{comparison-table}, Timeproof provides a comprehensive framework that encompasses:
+\begin{itemize}
+    \item \textbf{Accurate Timestamping:} Like Proof of Existence, it leverages blockchain immutability.
+    \item \textbf{Formal Mathematical Verification:} It goes further by integrating a probabilistic verification model, which is absent in many related protocols.
+    \item \textbf{Economic Incentives:} A unique bounty mechanism ensures that claims are both incentivized and contested, aiding in the dispute resolution over time.
+\end{itemize}
+
+This nuanced combination of features enables Timeproof to address long-standing and challenging problems—such as the $P$ vs $NP$ problem—with a level of rigor and accountability not found in prior approaches.
 
 \section{Future Directions}
 The Timeproof protocol opens several avenues for future research:
