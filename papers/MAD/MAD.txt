@@ -255,12 +255,12 @@ For a statement $S$ exhibiting the MAD property, the probability of $S$ being fa
 \end{enumerate}
 \qed
 
-\subsection{Dimensional Constraints on Timeproof Verification}
-The Timeproof Protocol already establishes a probabilistic verification system for mathematical claims over time\footnote{See the TIMEPROOF Protocol for details}. However, if $P$ vs $NP$ is dimension-dependent, then the function governing verification probability must be modified to include an $N$-dimensional dependence:
+\subsection{Dimensional Constraints on Temporal Verification}
+Our verification framework builds on a probabilistic model for consensus formation—akin to blockchain-based timestamping—that captures the idea of temporal stabilization of a mathematical claim. In this model, the verification probability depends not only on time but also on the dimensional structure of the computational space. Specifically, we define:
 \[
 V(t,N) = 1 - \exp\bigl(-\lambda(N)\,t\bigr),
 \]
-where $\lambda(N)$ is a dimensional verification rate function given by:
+where the dimensional verification rate function \(\lambda(N)\) is given by:
 \[
 \lambda(N)=
 \begin{cases}
