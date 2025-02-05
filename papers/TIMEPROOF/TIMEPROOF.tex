@@ -23,42 +23,36 @@
 \fancyfoot[CE,CO]{\thepage}
 \usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
 
-% Define custom commands for arXiv categories
 \newcommand{\arxivCategory}[1]{\par\noindent\textbf{arXiv category:} #1\par}
 
-% Algorithm settings
 \algtext*{EndWhile}
 \algrenewcommand\algorithmicrequire{\textbf{Input:}}
 \algrenewcommand\algorithmicensure{\textbf{Output:}}
 
-% Define theorem environments
 \newtheorem{theorem}{Theorem}
 \newtheorem{definition}{Definition}
 \newtheorem{lemma}{Lemma}
 \newtheorem{corollary}{Corollary}
 
-% Custom commands for metadata (hidden versions)
 \newcommand{\email}[1]{\hypersetup{pdfauthor={#1}}}
 \newcommand{\comments}[1]{\hypersetup{pdfcreator={#1}}}
 \newcommand{\keywords}[1]{\hypersetup{pdfkeywords={#1}}}
 
-% Set metadata (hidden)
 \keywords{cryptographic protocol, probabilistic truth, temporal persistence, blockchain, mathematical verification, Bitcoin, complexity theory, P vs NP, zero-knowledge proofs, verifiable delay functions}
 \comments{Submitted to Journal of Cryptography}
 \date{\today}
 
-% Add arXiv categories (still using custom command but hidden)
 \renewcommand{\arxivCategory}[1]{\hypersetup{pdfsubject={#1}}}
-\arxivCategory{cs.CR}  % Cryptography and Security (primary)
-\arxivCategory{cs.CC}  % Computational Complexity
-\arxivCategory{cs.GT}  % Computer Science and Game Theory
-\arxivCategory{cs.DC}  % Distributed, Parallel, and Cluster Computing
+\arxivCategory{cs.CR}  %
+\arxivCategory{cs.CC}  %
+\arxivCategory{cs.GT}  %
+\arxivCategory{cs.DC}  %
 
-\setcounter{secnumdepth}{2}  % Number up to subsections
+\setcounter{secnumdepth}{2}  %
 
 \makeatletter
-\renewcommand{\@chapapp}{} % Remove 'Chapter' text
-\renewcommand{\@makechapterhead}[1]{%  % Modify chapter heading
+\renewcommand{\@chapapp}{} %
+\renewcommand{\@makechapterhead}[1]{%
   \vspace*{50\p@}%
   {\parindent \z@ \raggedright \normalfont
     \ifnum \c@secnumdepth >\m@ne
@@ -70,11 +64,11 @@
 
 \begin{document}
 
-\title{Mathematical TimeProof: Probabilistic Verification of Unproven Theorems}
+\title{Mathematical Timeproof: Probabilistic Verification of Unproven Theorems}
 \author{Nathaniel Joseph Houk\\
 Independent Researcher\\
 \textit{Email:} \href{mailto:njhouk@gmail.com}{njhouk@gmail.com}}
-\date{July 2025}
+\date{February 2025}
 
 \maketitle
 
@@ -127,7 +121,7 @@ The protocol reveals an inherent tension in mathematical verification through th
 This tension is formally captured by the verification function:
 \begin{equation*}
     \lim_{\Delta t \to \infty} V(\Delta t) = 1 \quad \text{while} \quad \exists t_0 \text{ such that } V(t_0) = 0
-\end{equation*}
+\end{equation*} 
 
 The protocol thus provides a framework for understanding the boundary between:
 \begin{itemize}
@@ -151,7 +145,7 @@ Funds are locked in a Bitcoin address whose private key is deterministically gen
 \end{itemize}
 
 \subsection{Temporal Verification}
-The Bitcoin blockchain mainnet \cite{Nakamoto2008} is utilized for immutable timestamping. Building on foundational work in secure timestamping \cite{HaberStornetta1991}, tools such as \textit{OpenTimestamps} and \textit{Proof of Existence} facilitate this process:
+The Bitcoin blockchain mainnet \cite{Nakamoto2008} is utilized for immutable timestamping. Building on foundational work in secure timestamping \cite{HaberStornetta1991,BayerHaberStornetta1993}, tools such as \textit{OpenTimestamps} and \textit{Proof of Existence} facilitate this process:
 
 \begin{itemize}
     \item \textbf{OpenTimestamps}: Provides a standard for blockchain timestamping by aggregating file hashes into a Merkle tree, committing the Merkle root to the Bitcoin blockchain, and returning a proof file that can be independently verified \cite{opentimestamps}.
@@ -226,6 +220,8 @@ However, the Weibull distribution provides the best fit for our purposes due to 
 \end{algorithmic}
 \end{algorithm}
 
+The implementation makes use of Merkle tree structures \cite{Merkle1980} for efficient hash aggregation.
+
 Where the algorithm makes use of:
 \begin{itemize}
     \item $\text{SHA-256}^2(x) \equiv \text{SHA-256}(\text{SHA-256}(x))$
@@ -235,7 +231,7 @@ Where the algorithm makes use of:
     \item Key derivation follows NIST SP 800-56A Rev. 3 key derivation guidelines
 \end{itemize}
 
-\clearpage  % Force a new page here
+\clearpage  %
 
 \subsection{The Role of the Salt}
 
@@ -360,7 +356,7 @@ Under the post-quantum security of SHA3-256 and CRYSTALS-Dilithium, for any PPT 
 \[
 \text{Adv}_{\mathcal{A}}^{\text{Timeproof}}(\lambda) \leq \frac{q_H^2}{2^{256}} + \text{Adv}_{\text{ML-DSA}}^{\text{EUF-CMA}}(\lambda)
 \]
-where $q_H$ is the number of hash queries and ML-DSA is Module-Lattice Digital Signature Algorithm.
+where $q_H$ is the number of hash queries and ML-DSA is Module-Lattice Digital Signature Algorithm \cite{MLDSA2022}.
 \end{theorem}
 
 \begin{proof}
@@ -388,7 +384,7 @@ Assume \(\mathcal{A}\) can generate a valid address without the correct \(H\) an
 Since all three cases reduce to problems assumed to be hard, the protocol is secure.
 \end{proof}
 
-\clearpage  % Force a new page here
+\clearpage  %
 
 \section{Protocol Implementation}
 \subsection{Algorithmic Details}
@@ -486,7 +482,7 @@ A timeproof \( T \) for a statement \( S \) is defined as a tuple \( (E, V, t) \
     \end{enumerate}
 \end{itemize}
 
-These verification properties build on fundamental results in interactive proof systems \cite{Shamir1992}, with security guarantees derived from established cryptographic primitives \cite{BlumEtAl1986,ChaumEtAl1988}.
+These verification properties build on fundamental results in interactive proof systems \cite{GoldwasserMicaliRackoff1989}, with security guarantees derived from established cryptographic primitives \cite{BlumEtAl1986,ChaumEtAl1988}.
 
 \begin{theorem}[Houk's Theorem of Temporal Verification]
 Let \( T \) be a timeproof for statement \( S \) with verification function \( V(\Delta t) \). Then:
@@ -528,7 +524,7 @@ V(\Delta t) = 1 - \exp\left(-\lambda \Delta t\right)
 \]
 where \( V(\Delta t) \) is the probability of truth after time \( \Delta t \), provides a framework for understanding how temporal persistence can establish global truth over time.
 
-This builds on the blockchain timestamping work presented in \cite{Houk2025Timezones}, which established the foundation for globally consistent time references.
+This builds on the blockchain timestamping work presented in \cite{HaberStornetta1991}, which established the foundation for secure timestamping mechanisms.
 
 \section{Case Study: P vs NP Problem}
 
@@ -780,7 +776,7 @@ Timeproof introduces a new paradigm for establishing probabilistic truth in comp
     \item[Zero-Knowledge Priority] A mechanism that allows proving priority of a mathematical claim without revealing the actual proof contents.
 \end{description}
 
-\bibliographystyle{plain}  % or another style of your choice
-\bibliography{references}  % assuming your .bib file is named references.bib
+\bibliographystyle{plain}  %
+\bibliography{references}  %
 
 \end{document}

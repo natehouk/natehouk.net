@@ -31,4 +31,4 @@ clean-all:
 
 # Remove only LaTeX temporary files
 clean-temp:
-    rm -f *.aux *.log *.synctex.gz *.out *.toc *.fls *.fdb_latexmk
+    rm -f *.aux *.synctex.gz *.out *.toc *.fls *.fdb_latexmk
