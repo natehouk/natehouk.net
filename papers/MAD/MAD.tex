@@ -1510,16 +1510,64 @@ where $W_i = \int_{\mathcal{C}^*} |\nabla S|^2 g_{\mu\nu} dx^\mu dx^\nu$ is the 
 \end{definition}
 
 \subsubsection{Constraints on Oracle Optimization}
-[...]
+Within the entropy-flow framework, oracle optimization is bounded by three fundamental constraints:
+
+\begin{enumerate}[label=(\roman*)]
+    \item \textbf{Entropic Conservation:} No oracle $O_i$ can reduce local entropy $S(x,t)$ below the Landauer limit:
+    \[
+    S_{\min} = k_B \ln 2 \cdot N_{\text{ops}}
+    \]
+    where $N_{\text{ops}}$ is the number of irreversible bit operations.
+    
+    \item \textbf{Work-Entropy Tradeoff:} The verification work $W_i$ required for strategic modification follows:
+    \[
+    \frac{dW_i}{dS} \geq \frac{T_0}{\eta_{\max}} \left(1 - \frac{S}{S_{\max}}\right)
+    \]
+    where $T_0$ is the ambient computational temperature and $\eta_{\max}$ the maximum Carnot efficiency.
+    
+    \item \textbf{Stability Threshold:} Oracle modifications must preserve:
+    \[
+    \left|\frac{\partial^2 S}{\partial x^\mu \partial x^\nu}\right| < \Lambda_{\text{Planck}}^{(D)}
+    \]
+    where $\Lambda_{\text{Planck}}^{(D)}$ is the D-dimensional Planck-scale curvature limit.
+\end{enumerate}
+
+These constraints prevent oracle dominance cascades while maintaining the dimensional Nash equilibrium.
 
 \subsubsection{Implications for Self-Evolving Oracles}
-[...]
+Self-modifying oracles face fundamental limits under entropy-flow equilibrium:
+
+\begin{theorem}[No Free Self-Optimization]
+For any self-evolving oracle $O_{\text{SE}}$ with adaptation rate $\alpha$, its entropy production rate satisfies:
+\[
+\frac{dS_{\text{SE}}}{dt} \geq \alpha^2 \cdot \frac{\hbar_{\text{comp}}}{T_{\text{eff}}}
+\]
+where $\hbar_{\text{comp}}$ is the computational Planck constant and $T_{\text{eff}}$ the effective verification temperature.
+\end{theorem}
+
+\textbf{Proof Sketch:} Follows from Feynman's ratchet analysis applied to self-modifying circuits. The tighter bound comes from Kadanoff scaling of computational critical phenomena.
+
+\begin{corollary}[Evolutionary Stalemate]
+All self-evolving oracle networks eventually reach:
+\[
+\lim_{t\to\infty} \frac{dU}{dS} = 0 \quad \text{and} \quad \frac{d^2U}{dS^2} < 0
+\]
+where $U$ is utility. This forces evolutionary stagnation to preserve entropy-flow balance.
+\end{corollary}
+
+The implications are profound:
+\begin{itemize}
+    \item \textbf{Adaptation Ceiling:} No oracle can indefinitely outpace competitors without violating entropy constraints
+    \item \textbf{Strategic Homogenization:} Diverse strategies converge to entropy-neutral Nash equilibria
+    \item \textbf{Death of Singularity:} Recursive self-improvement halts at critical entropy thresholds
+\end{itemize}
 
 \subsubsection{Trans-Dimensional Entropy Redistribution}
+To account for interactions across different dimensional regimes, we impose an additional entropy conservation constraint. Specifically, for any closed hypersurface $\partial\mathcal{D}$ spanning the interface between dimensions, the integrated entropy—weighted by the local metric—must remain invariant:
 \[
-\oint_{\partial\mathcal{D}} S(x,t)g_{\mu\nu} dx^\mu dx^\nu = \text{const}
+\oint_{\partial\mathcal{D}} S(x,t)\, g_{\mu\nu}\, dx^\mu dx^\nu = \text{const}.
 \]
-This ensures entropy conservation across dimensional boundaries while preventing computational black hole formation.
+This condition enforces the conservation of entropy as computational processes transition between dimensions, thereby preventing unbounded accumulations or depletions that could lead to pathological behaviors (such as the formation of computational black holes). Through this constraint, we ensure that the entropy-flow framework retains consistency even under trans-dimensional interactions.
 
 \section{Computational Time Dilation in Strategic Intelligence}
 
