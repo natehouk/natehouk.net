@@ -28,6 +28,201 @@
   <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
 </head>
 
+<!-- #HoukPopp2028 Highlighted Banner -->
+<section id="hp2028-banner" role="region" aria-label="#HoukPopp2028 update">
+  <div class="hp2028-wrap">
+    <div class="hp2028-left">
+      <span class="hp2028-pill" aria-hidden="true">#HoukPopp2028</span>
+      <h2 class="hp2028-title">A movement, not a campaign.</h2>
+      <p class="hp2028-text">
+        <strong>HoukPopp2028</strong> is an independent political & cultural initiative by
+        <strong>Nathaniel Joseph Houk</strong> and <strong>Stephanie Lee Popp</strong>—blending
+        logic and empathy, technology and art, truth and transparency. It’s not about parties—it's
+        about <em>possibility</em>. Born at the intersection of AI, creativity, and civic innovation,
+        the movement explores how data, storytelling, and decentralized collaboration can rebuild public
+        trust and reimagine governance for the next generation.
+      </p>
+      <p class="hp2028-links">
+        <a class="hp2028-cta" href="https://www.instagram.com/explore/tags/houkpopp2028/" target="_blank" rel="noopener">Follow the journey</a>
+      </p>
+    </div>
+    <button class="hp2028-dismiss" aria-label="Dismiss announcement" title="Dismiss">✕</button>
+  </div>
+</section>
+
+<style>
+  /* --- #HoukPopp2028 banner styles (scoped by #hp2028-banner) --- */
+  :root {
+    --hp2028-bg: #0b0f14;
+    --hp2028-fg: #eaf2ff;
+    --hp2028-muted: #b9c7e6;
+    --hp2028-ring: #7aa2ff;
+    --hp2028-pill: #1a2636;
+    --hp2028-accent: #c6d8ff;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --hp2028-bg: #f5f8ff;
+      --hp2028-fg: #0b1020;
+      --hp2028-muted: #3f4b63;
+      --hp2028-ring: #3b6cff;
+      --hp2028-pill: #e8eeff;
+      --hp2028-accent: #1837ff;
+    }
+  }
+
+  #hp2028-banner {
+    isolation: isolate;
+    margin: 1rem auto;
+    padding: 0;
+    max-width: 1200px;
+  }
+
+  #hp2028-banner .hp2028-wrap {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: start;
+
+    border-radius: 16px;
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+    background:
+      linear-gradient(135deg, rgba(90,132,255,0.25), rgba(96,217,255,0.22)) padding-box,
+      radial-gradient(1200px 400px at 0% 0%, rgba(59,108,255,0.25), transparent 60%),
+      radial-gradient(900px 300px at 100% 100%, rgba(96,217,255,0.25), transparent 60%),
+      var(--hp2028-bg);
+    color: var(--hp2028-fg);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.05) inset,
+      0 10px 30px rgba(0,0,0,0.15);
+    border: 1px solid rgba(122,162,255,0.35);
+    overflow: hidden;
+  }
+
+  /* Decorative ring glow */
+  #hp2028-banner .hp2028-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: 16px;
+    pointer-events: none;
+    background: radial-gradient(600px 120px at 10% -20%, rgba(122,162,255,0.35), transparent 60%),
+                radial-gradient(600px 120px at 90% 120%, rgba(96,217,255,0.35), transparent 60%);
+    mask: linear-gradient(#000, transparent 70%);
+  }
+
+  #hp2028-banner .hp2028-left {
+    min-width: 0;
+  }
+
+  #hp2028-banner .hp2028-pill {
+    display: inline-block;
+    font: 600 12px/1.2 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: .5rem .65rem;
+    border-radius: 999px;
+    background: var(--hp2028-pill);
+    color: var(--hp2028-accent);
+    border: 1px solid rgba(122,162,255,0.35);
+    margin-bottom: .6rem;
+  }
+
+  #hp2028-banner .hp2028-title {
+    font: 700 20px/1.25 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0 0 .35rem 0;
+    letter-spacing: .2px;
+  }
+
+  #hp2028-banner .hp2028-text {
+    font: 400 15px/1.55 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--hp2028-muted);
+    margin: 0;
+  }
+
+  #hp2028-banner .hp2028-links {
+    margin: .85rem 0 0 0;
+  }
+
+  #hp2028-banner .hp2028-cta {
+    display: inline-block;
+    font: 600 14px/1 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+    padding: .7rem 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(122,162,255,0.45);
+    text-decoration: none;
+    color: var(--hp2028-fg);
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.00));
+    transition: transform .08s ease, background .2s ease, border-color .2s ease;
+    will-change: transform;
+  }
+  #hp2028-banner .hp2028-cta:hover {
+    transform: translateY(-1px);
+    background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.00));
+    border-color: var(--hp2028-ring);
+  }
+  #hp2028-banner .hp2028-cta:focus-visible {
+    outline: 2px solid var(--hp2028-ring);
+    outline-offset: 2px;
+  }
+
+  #hp2028-banner .hp2028-dismiss {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--hp2028-muted);
+    font: 600 16px/1 monospace;
+    padding: .35rem;
+    border-radius: 8px;
+    cursor: pointer;
+    align-self: start;
+  }
+  #hp2028-banner .hp2028-dismiss:hover {
+    color: var(--hp2028-fg);
+    background: rgba(122,162,255,0.12);
+  }
+  #hp2028-banner .hp2028-dismiss:focus-visible {
+    outline: 2px solid var(--hp2028-ring);
+    outline-offset: 2px;
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    #hp2028-banner .hp2028-title { font-size: 18px; }
+    #hp2028-banner .hp2028-text { font-size: 14.5px; }
+    #hp2028-banner .hp2028-wrap { grid-template-columns: 1fr auto; padding: 1rem; }
+  }
+</style>
+
+<script>
+  (function () {
+    try {
+      var KEY = "hp2028_dismissed_v1";
+      var banner = document.getElementById("hp2028-banner");
+      if (!banner) return;
+
+      // Respect prior dismissal
+      var dismissed = window.localStorage && localStorage.getItem(KEY) === "1";
+      if (dismissed) {
+        banner.hidden = true;
+        return;
+      }
+
+      // Wire up dismiss
+      var btn = banner.querySelector(".hp2028-dismiss");
+      if (btn) {
+        btn.addEventListener("click", function () {
+          banner.hidden = true;
+          try { localStorage.setItem(KEY, "1"); } catch (e) {}
+        });
+      }
+    } catch (e) {
+      // Fail gracefully without breaking the page
+    }
+  })();
+</script>
+  
 <body itemscope itemtype="http://schema.org/Person">
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
