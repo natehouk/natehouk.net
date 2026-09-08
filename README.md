@@ -42,7 +42,6 @@ I'm a software engineer and quantitative trader with a passion for building scal
 
 ## 📫 Get in Touch
 
-- Email: nate.houk@gmail.com
 - Website: [natehouk.net](https://natehouk.net)
 - GitHub: [@natehouk](https://github.com/natehouk)
 
